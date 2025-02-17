@@ -1,4 +1,9 @@
-# assalamualaikum
+# Sistem Persamaan Linier
+## Definisi Sistem Persamaan Linier
+## Solusi Persamaan Linier
+### Eliminasi
+### Eliminasi Gaus
+### Solusi Grafik
 
 ya allah akhirnya
 
