@@ -3,10 +3,9 @@
 Sistem linier adalah gabungan dari beberapa persamaan yang diselesaikan secara bersama untuk menemukan nilai dan variabel yang belum diketahui
 
 ## Definisi Sistem Persamaan Linier
+
 ## Solusi Persamaan Linier
-### Eliminasi
-### Eliminasi Gaus
-### Solusi Grafik
+### eliminasi
 
 ya allah akhirnya
 
