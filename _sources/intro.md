@@ -8,10 +8,17 @@ Sistem persamaan linier adalah sekumpulan dari beberapa persamaan linear yang di
 ## Solusi Sistem Persamaan Linier
 Solusi dari persamaan linier adalah nilai dari variabel yang membuat persamaan tersebut menjadi benar. Pada sistem persamaan linier, solusi ini adalah jika titik-titik yang mewakili persamaan-persamaan tersebut saling berpotongan. Solusi tersebut bisa berupa:
 
-1. Satu solusi: Jika garis atau berpotongan pada satu titik
-print ( )
- Contoh persamaan linier dengan dua variabel $x$ dan $y$ yang berpotongan bisa ditulis sebagai berikut:
- $2x+3y=12$ dan $x−y=1$
+1. Satu solusi: Jika garis atau berpotongan pada satu titik.
+
+
+Contoh persamaan linier dengan dua variabel $x$ dan $y$ yang berpotongan bisa ditulis sebagai berikut : $x + y = 6$ dan $2x + y = 8$
+
+Untuk menemukan titik potongnya kita selesaikan menggunakan metode eliminasi.
+
+<iframe scrolling="no" title="Simultaneous Equations:Elimination" src="https://www.geogebra.org/material/iframe/id/MXa3HKy3/width/977/height/574/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="977px" height="574px" style="border:0px;"> </iframe>
+
+lalu hasil nya akan seperti ini
+
 ![plot](1solusi.png) 
 
 2. Tidak ada solusi: Jika garis tidak berpotongan
