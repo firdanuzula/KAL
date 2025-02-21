@@ -1,6 +1,5 @@
 # Persamaan Linier
-Persamaan linier adalah persamaan aljabar yang melibatkan variabel-variabel yang memiliki pangkat 1, atau dengan kata lain, tidak ada variabel yang dipangkatkan lebih tinggi dari satu (misalnya, tidak ada $ x^2, y^3 $, dan seterusnya). Persamaan linier dapat digambarkan dalam bentuk umum seperti berikut:
-$$ a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = b $$
+Persamaan linier adalah persamaan aljabar yang melibatkan variabel-variabel yang memiliki pangkat 1, atau dengan kata lain, tidak ada variabel yang dipangkatkan lebih tinggi dari satu (misalnya, tidak ada $ x^2, y^3 $, dan seterusnya). Persamaan linier dapat digambarkan dalam bentuk umum, yakni $ a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = b $
 
 # Sistem Persamaan Linier
 
