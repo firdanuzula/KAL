@@ -1,7 +1,7 @@
 # Persamaan Linier
 Persamaan linier adalah persamaan aljabar yang melibatkan variabel-variabel yang memiliki pangkat 1, atau dengan kata lain, tidak ada variabel yang dipangkatkan lebih tinggi dari satu. 
 
-$$ x^2 $$
+$ x^2 $
 
 # Sistem Persamaan Linier
 
