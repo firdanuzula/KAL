@@ -22,5 +22,16 @@ lalu hasil nya akan seperti ini
 ![plot](1solusi.png) 
 
 2. Tidak ada solusi: Jika garis tidak berpotongan
+
+Kita dapat melihat bahwa kedua persamaan ini berbentuk sama, yaitu :
+$ x + y = 5$ dan $ x + y = 8$.
+$x + y =$ (konstanta). Namun, konstanta mereka berbeda (5 dan 8). Jadi, tidak ada solusi yang dapat memenuhi kedua persamaan tersebut secara bersamaan.
+
+Dengan kata lain, kedua persamaan ini saling sejajar dan tidak memiliki titik potong. Artinya, sistem persamaan ini tidak memiliki solusi.
+
+Secara matematis, kita dapat menyimpulkan bahwa tidak ada titik potong. Jika digambarkan maka hasilnya akan seperti ini.
+
+![plot](2solusi.png) 
+
 3. Banyak solusi: Jika garis saling tumpang tindih
 
