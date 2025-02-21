@@ -35,3 +35,11 @@ Secara matematis, kita dapat menyimpulkan bahwa tidak ada titik potong. Jika dig
 
 3. Banyak solusi: Jika garis saling tumpang tindih
 
+Untuk dua persamaan yang memiliki titik potong yang sama namun tidak identik, kita bisa membuat dua persamaan yang berbeda, tetapi keduanya saling mewakili garis yang sama. Berikut contohnya: 
+$x + y = 7$ dan $2x + 2y = 14$
+
+Persamaan kedua bisa disederhanakan menjadi $x + y = 7$, yang identik dengan persamaan pertama. Meskipun persamaan ini terlihat berbeda, keduanya sebenarnya menggambarkan garis yang sama, sehingga titik potongnya adalah garis itu sendiri.
+
+Dengan kata lain, kedua persamaan ini akan tumpang tindih di sepanjang garis $x + y = 7$. Jika di gambarkan, maka hasilnya akan seperti ini.
+
+![plot](3solusi.png) 
