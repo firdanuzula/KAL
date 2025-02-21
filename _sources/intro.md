@@ -8,7 +8,7 @@ x^2 \cdot y^3
 
 Sistem persamaan linier adalah sekumpulan dari beberapa persamaan linear yang diselesaikan secara bersama untuk menemukan nilai dan variabel yang belum diketahui
 
-## Solusi Persamaan Linier
+## Solusi Sistem Persamaan Linier
 Solusi dari persamaan linier adalah nilai dari variabel yang membuat persamaan tersebut menjadi benar. Pada sistem persamaan linier, solusi ini adalah jika titik-titik yang mewakili persamaan-persamaan tersebut saling berpotongan. Solusi tersebut bisa berupa:
 
 1. Satu solusi: Jika garis atau berpotongan pada satu titik
