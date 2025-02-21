@@ -29,7 +29,7 @@ $x + y =$ (konstanta). Namun, konstanta mereka berbeda (5 dan 8). Jadi, tidak ad
 
 Dengan kata lain, kedua persamaan ini saling sejajar dan tidak memiliki titik potong. Artinya, sistem persamaan ini tidak memiliki solusi.
 
-Secara matematis, kita dapat menyimpulkan bahwa tidak ada titik potong. Jika digambarkan maka hasilnya akan seperti ini.
+Kita dapat menyimpulkan bahwa tidak ada titik potong. Jika digambarkan maka hasilnya akan seperti ini.
 
 ![plot](2solusi.png) 
 
