@@ -1,8 +1,5 @@
 # Persamaan Linier
-Persamaan linier adalah persamaan aljabar yang melibatkan variabel-variabel yang memiliki pangkat 1, atau dengan kata lain, tidak ada variabel yang dipangkatkan lebih tinggi dari satu (misalnya, tidak ada \[
-x^2 \cdot y^3
-\]
-, dan seterusnya).
+Persamaan linier adalah persamaan aljabar yang melibatkan variabel-variabel yang memiliki pangkat 1, atau dengan kata lain, tidak ada variabel yang dipangkatkan lebih tinggi dari satu.
 
 # Sistem Persamaan Linier
 
