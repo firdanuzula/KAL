@@ -8,7 +8,7 @@ Sistem persamaan linier adalah sekumpulan dari beberapa persamaan linear yang di
 ## Solusi Sistem Persamaan Linier
 Solusi dari persamaan linier adalah nilai dari variabel yang membuat persamaan tersebut menjadi benar. Pada sistem persamaan linier, solusi ini adalah jika titik-titik yang mewakili persamaan-persamaan tersebut saling berpotongan. Solusi tersebut bisa berupa:
 
-### 1. Satu solusi: Jika garis atau berpotongan pada satu titik.
+### 1. Satu solusi : Jika garis atau berpotongan pada satu titik.
 
 
 Contoh persamaan linier dengan dua variabel $x$ dan $y$ yang berpotongan bisa ditulis sebagai berikut : $x + y = 6$ dan $2x + y = 8$
@@ -21,11 +21,11 @@ lalu hasil nya akan seperti ini
 
 ![plot](1solusi.png) 
 
-### 2. Tidak ada solusi: Jika garis tidak berpotongan
+### 2. Tidak ada solusi : Jika garis tidak berpotongan
 
 Kita dapat melihat bahwa kedua persamaan ini berbentuk sama, yaitu :
 $ x + y = 5$ dan $ x + y = 8$.
-$x + y =$ (konstanta). Namun, konstanta mereka berbeda (5 dan 8). Jadi, tidak ada solusi yang dapat memenuhi kedua persamaan tersebut secara bersamaan.
+maka, $x + y =$ (konstanta). Namun, konstanta mereka berbeda (5 dan 8). Jadi, tidak ada solusi yang dapat memenuhi kedua persamaan tersebut secara bersamaan.
 
 Dengan kata lain, kedua persamaan ini saling sejajar dan tidak memiliki titik potong. Artinya, sistem persamaan ini tidak memiliki solusi.
 
@@ -33,7 +33,7 @@ Kita dapat menyimpulkan bahwa tidak ada titik potong. Jika digambarkan maka hasi
 
 ![plot](2solusi.png) 
 
-### 3. Banyak solusi: Jika garis saling tumpang tindih
+### 3. Banyak solusi : Jika garis saling tumpang tindih
 
 Untuk dua persamaan yang memiliki titik potong yang sama namun tidak identik, kita bisa membuat dua persamaan yang berbeda, tetapi keduanya saling mewakili garis yang sama. Berikut contohnya: 
 $x + y = 7$ dan $2x + 2y = 14$
