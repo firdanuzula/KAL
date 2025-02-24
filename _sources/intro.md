@@ -1,7 +1,7 @@
 # Penyelesaian Sistem Persamaan Linear
 
-Diberikan sistem persamaan:
 ### nomor 3
+Diberikan sistem persamaan:
 
 $$
 2x_1 + 2x_2 = 4
@@ -37,18 +37,18 @@ Sehingga, matriks augmented menjadi:
 
 $$
 \begin{bmatrix}
-0 & 0 & | & 0 \\
-1 & 1 & | & 2
+1 & 1 & | & 2 \\
+0 & 0 & | & 0
 \end{bmatrix}
 $$
 
-Dari baris kedua, kita dapat mengekspresikan \(x_1\) dalam bentuk \(x_2\):
+Dari baris kedua, kita dapat mengekspresikan $\(x_1\)$ dalam bentuk $\(x_2\)$:
 
 $$
 x_1 + x_2 = 2 \implies x_1 = 2 - x_2
 $$
 
-Karena kita memiliki satu persamaan dengan dua variabel, kita dapat menyatakan solusi dalam bentuk parameter. Misalkan \(x_2 = t\), maka:
+Karena kita memiliki satu persamaan dengan dua variabel, kita dapat menyatakan solusi dalam bentuk parameter. Misalkan $\(x_2 = t\)$, maka:
 
 $$
 x_1 = 2 - t
@@ -63,7 +63,7 @@ x_2 = t
 \end{cases}
 $$
 
-di mana \(t\) adalah parameter bebas.
+di mana $\(t\)$ adalah parameter bebas.
 
 ### nomor 4
 Diberikan sistem persamaan:
