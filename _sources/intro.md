@@ -110,3 +110,63 @@ x_2 = t
 $$
 
 di mana \(t\) adalah parameter bebas.
+
+## nomor 4
+Diberikan sistem persamaan:
+
+$$
+x_1 + x_2 = 5
+$$
+$$
+x_1 + 2x_3 = 6
+$$
+
+Kita akan menyelesaikannya menggunakan metode eliminasi Gauss. Pertama, kita tuliskan sistem ini dalam bentuk matriks augmented:
+
+$$
+\begin{bmatrix}
+1 & 1 & 0 & | & 5 \\
+1 & 0 & 2 & | & 6
+\end{bmatrix}
+$$
+
+Langkah pertama adalah membuat elemen di bawah pivot (elemen pertama di kolom pertama) menjadi nol. Kita lakukan operasi berikut:
+
+$$
+R_2 \leftarrow R_2 - R_1
+$$
+
+Setelah melakukan perhitungan, kita mendapatkan:
+
+$$
+R_2: \quad 1 - 1 = 0 \\
+0 - 1 = -1 \\
+2 - 0 = 2 \\
+6 - 5 = 1
+$$
+
+Sehingga, matriks augmented menjadi:
+
+$$
+\begin{bmatrix}
+1 & 1 & 0 & | & 5 \\
+0 & -1 & 2 & | & 1
+\end{bmatrix}
+$$
+
+Selanjutnya, kita dapat menyelesaikan baris kedua untuk mengekspresikan \(x_2\) dalam bentuk \(x_3\):
+
+$$
+-1x_2 + 2x_3 = 1 \implies x_2 = 2x_3 - 1
+$$
+
+Sekarang kita substitusi \(x_2\) ke dalam persamaan pertama:
+
+$$
+x_1 + (2x_3 - 1) = 5
+$$
+
+Maka kita dapatkan:
+
+$$
+x_
