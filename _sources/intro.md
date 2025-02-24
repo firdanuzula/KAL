@@ -44,18 +44,48 @@ Dengan kata lain, kedua persamaan ini akan tumpang tindih di sepanjang garis $x 
 
 ![plot](3solusi.png) 
 
-# Penyelesaian
-## nomor 3
+## Penyelesaian Sistem Persamaan Linear
 
-$
-2x_1 + 2x_2 = 4 \quad \text{dan} \quad x_1 + x_2 = 2
-$
- 
-langkah 1 : masukkan persamaan ke matrix
-$\[
+Diberikan sistem persamaan:
+### nomor 3
+
+$$
+2x_1 + 2x_2 = 4
+$$
+$$
+x_1 + x_2 = 2
+$$
+
+Kita akan menyelesaikannya menggunakan metode eliminasi Gauss. Pertama, kita tuliskan sistem ini dalam bentuk matriks augmented:
+
+$$
 \begin{bmatrix}
-2 & 1 \\
-2 & 1 \\
-4 & 2
+2 & 2 & | & 4 \\
+1 & 1 & | & 2
 \end{bmatrix}
-\]$
+$$
+
+Langkah pertama adalah membuat elemen di bawah pivot menjadi nol. Kita lakukan operasi berikut:
+
+$$
+R_1 \leftarrow R_1 - 2R_2
+$$
+
+Setelah melakukan perhitungan, kita mendapatkan:
+
+$$
+R_1: \quad 2 - 2 \cdot 1 = 0 \\
+2 - 2 \cdot 1 = 0 \\
+4 - 2 \cdot 2 = 0
+$$
+
+Sehingga, matriks augmented menjadi:
+
+$$
+\begin{bmatrix}
+0 & 0 & | & 0 \\
+1 & 1 & | & 2
+\end{bmatrix}
+$$
+
+Dari baris kedua, kita dapat mengekspresikan \(x_1\) dalam bentuk \(x_2\):

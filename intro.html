@@ -370,10 +370,10 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi-jika-garis-saling-tumpang-tindih">3. Banyak solusi : Jika garis saling tumpang tindih</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linear">Penyelesaian Sistem Persamaan Linear</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-3">nomor 3</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-3">nomor 3</a></li>
 </ul>
 </li>
 </ul>
@@ -424,22 +424,49 @@ maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta).
 <p><img alt="plot" src="_images/3solusi.png" /></p>
 </section>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="penyelesaian">
-<h1>Penyelesaian<a class="headerlink" href="#penyelesaian" title="Link to this heading">#</a></h1>
+<section id="penyelesaian-sistem-persamaan-linear">
+<h2>Penyelesaian Sistem Persamaan Linear<a class="headerlink" href="#penyelesaian-sistem-persamaan-linear" title="Link to this heading">#</a></h2>
+<p>Diberikan sistem persamaan:</p>
 <section id="nomor-3">
-<h2>nomor 3<a class="headerlink" href="#nomor-3" title="Link to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(
-2x_1 + 2x_2 = 4 \quad \text{dan} \quad x_1 + x_2 = 2
-\)</span></p>
-<p>langkah 1 : masukkan persamaan ke matrix
-<span class="math notranslate nohighlight">\(\[
+<h3>nomor 3<a class="headerlink" href="#nomor-3" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+2x_1 + 2x_2 = 4
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x_1 + x_2 = 2
+\]</div>
+<p>Kita akan menyelesaikannya menggunakan metode eliminasi Gauss. Pertama, kita tuliskan sistem ini dalam bentuk matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{bmatrix}
-2 &amp; 1 \\
-2 &amp; 1 \\
-4 &amp; 2
+2 &amp; 2 &amp; | &amp; 4 \\
+1 &amp; 1 &amp; | &amp; 2
 \end{bmatrix}
-\]\)</span></p>
+\end{split}\]</div>
+<p>Langkah pertama adalah membuat elemen di bawah pivot menjadi nol. Kita lakukan operasi berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+R_1 \leftarrow R_1 - 2R_2
+\]</div>
+<p>Setelah melakukan perhitungan, kita mendapatkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_1: \quad 2 - 2 \cdot 1 = 0 \\
+2 - 2 \cdot 1 = 0 \\
+4 - 2 \cdot 2 = 0
+\end{split}\]</div>
+<p>Sehingga, matriks augmented menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; 0 &amp; | &amp; 0 \\
+1 &amp; 1 &amp; | &amp; 2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Dari baris kedua, kita dapat mengekspresikan (x_1) dalam bentuk (x_2):</p>
+</section>
 </section>
 <div class="toctree-wrapper compound">
 </div>
@@ -509,10 +536,10 @@ maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta).
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi-jika-garis-saling-tumpang-tindih">3. Banyak solusi : Jika garis saling tumpang tindih</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian-sistem-persamaan-linear">Penyelesaian Sistem Persamaan Linear</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-3">nomor 3</a></li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#penyelesaian">Penyelesaian</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-3">nomor 3</a></li>
 </ul>
 </li>
 </ul>
