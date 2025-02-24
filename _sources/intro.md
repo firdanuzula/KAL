@@ -43,3 +43,19 @@ Persamaan kedua bisa disederhanakan menjadi $x + y = 7$, yang identik dengan per
 Dengan kata lain, kedua persamaan ini akan tumpang tindih di sepanjang garis $x + y = 7$. Jika di gambarkan, maka hasilnya akan seperti ini.
 
 ![plot](3solusi.png) 
+
+# Penyelesaian
+## nomor 3
+
+$
+2x_1 + 2x_2 = 4 \quad \text{dan} \quad x_1 + x_2 = 2
+$
+ 
+langkah 1 : masukkan persamaan ke matrix
+$\[
+\begin{bmatrix}
+2 & 1 \\
+2 & 1 \\
+4 & 2
+\end{bmatrix}
+\]$
