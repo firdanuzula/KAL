@@ -364,6 +364,8 @@
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penyelesaian Sistem Persamaan Linear</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-3">nomor 3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-4">nomor 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-1">nomor 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-eliminasi-baris">Langkah 1: Eliminasi Baris</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-linier">Persamaan Linier</a></li>
@@ -528,6 +530,42 @@ x_3 = p
 \end{split}\]</div>
 <p>di mana (p) adalah parameter bebas.</p>
 </section>
+<section id="nomor-1">
+<h2>nomor 1<a class="headerlink" href="#nomor-1" title="Link to this heading">#</a></h2>
+<p>Diberikan sistem persamaan:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + 2x_2 + 3x_3 = 6
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+2x_1 + 4x_2 + 6x_3 = 12
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x_3 + x_2 = 2
+\]</div>
+<p>Kita akan menyelesaikannya menggunakan metode eliminasi Gauss. Pertama, kita tuliskan sistem ini dalam bentuk matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 &amp; | &amp; 6 \\
+2 &amp; 4 &amp; 6 &amp; | &amp; 12 \\
+0 &amp; 1 &amp; 1 &amp; | &amp; 2
+\end{bmatrix}
+\end{split}\]</div>
+</section>
+<section id="langkah-1-eliminasi-baris">
+<h2>Langkah 1: Eliminasi Baris<a class="headerlink" href="#langkah-1-eliminasi-baris" title="Link to this heading">#</a></h2>
+<p>Langkah pertama adalah membuat elemen di bawah pivot (elemen pertama di kolom pertama) menjadi nol. Kita lakukan operasi berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+R_2 \leftarrow R_2 - 2R_1
+\]</div>
+<p>Setelah melakukan perhitungan, kita mendapatkan:</p>
+<p>$$
+R_2: \quad 2 - 2 \cdot 1</p>
+</section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="persamaan-linier">
 <h1>Persamaan Linier<a class="headerlink" href="#persamaan-linier" title="Link to this heading">#</a></h1>
@@ -619,6 +657,8 @@ maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta).
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Penyelesaian Sistem Persamaan Linear</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-3">nomor 3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-4">nomor 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-1">nomor 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-1-eliminasi-baris">Langkah 1: Eliminasi Baris</a></li>
 </ul>
 </li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#persamaan-linier">Persamaan Linier</a></li>

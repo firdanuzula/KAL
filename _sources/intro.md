@@ -150,6 +150,41 @@ $$
 
 di mana \(p\) adalah parameter bebas.
 
+### nomor 1
+Diberikan sistem persamaan:
+
+$$
+x_1 + 2x_2 + 3x_3 = 6
+$$
+$$
+2x_1 + 4x_2 + 6x_3 = 12
+$$
+$$
+x_3 + x_2 = 2
+$$
+
+Kita akan menyelesaikannya menggunakan metode eliminasi Gauss. Pertama, kita tuliskan sistem ini dalam bentuk matriks augmented:
+
+$$
+\begin{bmatrix}
+1 & 2 & 3 & | & 6 \\
+2 & 4 & 6 & | & 12 \\
+0 & 1 & 1 & | & 2
+\end{bmatrix}
+$$
+
+### Langkah 1: Eliminasi Baris
+
+Langkah pertama adalah membuat elemen di bawah pivot (elemen pertama di kolom pertama) menjadi nol. Kita lakukan operasi berikut:
+
+$$
+R_2 \leftarrow R_2 - 2R_1
+$$
+
+Setelah melakukan perhitungan, kita mendapatkan:
+
+$$
+R_2: \quad 2 - 2 \cdot 1
 
 # Persamaan Linier
 Persamaan linier adalah persamaan aljabar yang melibatkan variabel-variabel yang memiliki pangkat 1, atau dengan kata lain, tidak ada variabel yang dipangkatkan lebih tinggi dari satu (misalnya, tidak ada $ x^2, y^3 $, dan seterusnya). Persamaan linier dapat digambarkan dalam bentuk umum, yakni $ a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = b $.
