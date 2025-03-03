@@ -29,17 +29,17 @@ koefisien linier adalah sesuatu yang melekat pada variable
 1. matrix augmentasi : mengubah persamaan ke matrix
 
 contoh : | menandakan koefisien
-$$\[
+$\[
 \begin{bmatrix} 
 1 & 2 & 1 & \vert & 9 \\ 
 2 & 1 & -1 & \vert & 3 \\ 
 3 & -1 & 2 & \vert & 8 
-\end{bmatrix}\]$$
+\end{bmatrix}\]$
 
 dari persamaan :
-x + 2y + z = 9
-2x + y - z = 3
-3x - y + 2x = 8
+- $x + 2y + z = 9$
+- $2x + y - z = 3$
+- $3x - y + 2x = 8$
 
 2. bentuk eselon baris 
 
