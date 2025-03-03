@@ -60,10 +60,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'penyelesaianspl';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Soal Penyelesaian Sistem Persamaan Linear" href="latihanspl.html" />
+    <link rel="next" title="Soal Penyelesaian Sistem Persamaan Linear" href="latihanspl.html" />
+    <link rel="prev" title="Persamaan Linier" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -168,8 +171,8 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="latihanspl.html">Soal Penyelesaian Sistem Persamaan Linear</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Sistem Persamaan Linier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="latihanspl.html">Soal Penyelesaian Sistem Persamaan Linear</a></li>
 </ul>
 
     </div>
@@ -362,9 +365,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-operasi-elementer">apa itu operasi elementer ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-operasi-elementer">Apa itu operasi elementer ?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-operasi-elementer">3 jenis operasi elementer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-eselon-baris-dan-eselon-baris-teredukasi">bentuk eselon baris dan eselon baris teredukasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-eselon-baris-dan-eselon-baris-teredukasi">Bentuk eselon baris dan eselon baris teredukasi</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-obe">Aplikasi OBE :</a></li>
@@ -386,7 +389,7 @@
 <p>cth analitik biasanya outputnya sama</p>
 <p>matrix adalah kumpulan bilangan yang disusun dalam baris dan kolom</p>
 <section id="apa-itu-operasi-elementer">
-<h2>apa itu operasi elementer ?<a class="headerlink" href="#apa-itu-operasi-elementer" title="Link to this heading">#</a></h2>
+<h2>Apa itu operasi elementer ?<a class="headerlink" href="#apa-itu-operasi-elementer" title="Link to this heading">#</a></h2>
 <section id="jenis-operasi-elementer">
 <h3>3 jenis operasi elementer<a class="headerlink" href="#jenis-operasi-elementer" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
@@ -396,7 +399,7 @@
 </ol>
 </section>
 <section id="bentuk-eselon-baris-dan-eselon-baris-teredukasi">
-<h3>bentuk eselon baris dan eselon baris teredukasi<a class="headerlink" href="#bentuk-eselon-baris-dan-eselon-baris-teredukasi" title="Link to this heading">#</a></h3>
+<h3>Bentuk eselon baris dan eselon baris teredukasi<a class="headerlink" href="#bentuk-eselon-baris-dan-eselon-baris-teredukasi" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>bentuk eselon baris : baris 0 dibawah sendiri, non 0 diatasnya</p></li>
 <li><p>eselon baris teredukasi : memenuhi persamaan garis , pivot bernilai 1</p></li>
@@ -418,9 +421,12 @@
 <li><p>matrix augmentasi : mengubah persamaan ke matrix</p></li>
 </ol>
 <p>contoh : | menandakan koefisien
-[1 2  1 | 9]
-[2 1 -1 | 3]
-[3 -1 2 | 8] ukuran matrix 3 x 4</p>
+$<span class="math notranslate nohighlight">\(\[
+\begin{bmatrix} 
+1 &amp; 2 &amp; 1 &amp; \vert &amp; 9 \\ 
+2 &amp; 1 &amp; -1 &amp; \vert &amp; 3 \\ 
+3 &amp; -1 &amp; 2 &amp; \vert &amp; 8 
+\end{bmatrix}\]\)</span>$</p>
 <p>dari persamaan :
 x + 2y + z = 9
 2x + y - z = 3
@@ -469,13 +475,22 @@ x + 2y + z = 9
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="latihanspl.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Persamaan Linier</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="latihanspl.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Soal Penyelesaian Sistem Persamaan Linear</p>
       </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -494,9 +509,9 @@ x + 2y + z = 9
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-operasi-elementer">apa itu operasi elementer ?</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#apa-itu-operasi-elementer">Apa itu operasi elementer ?</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#jenis-operasi-elementer">3 jenis operasi elementer</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-eselon-baris-dan-eselon-baris-teredukasi">bentuk eselon baris dan eselon baris teredukasi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bentuk-eselon-baris-dan-eselon-baris-teredukasi">Bentuk eselon baris dan eselon baris teredukasi</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aplikasi-obe">Aplikasi OBE :</a></li>

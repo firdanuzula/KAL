@@ -6,14 +6,14 @@ cth analitik biasanya outputnya sama
 
 matrix adalah kumpulan bilangan yang disusun dalam baris dan kolom
 
-## apa itu operasi elementer ?
+## Apa itu operasi elementer ?
 
 ### 3 jenis operasi elementer
 1. menukar dua baris
 2. mengalikan baris dengan skala non 0 (maka hasil garis nya sama , dikalikan selain 0)
 3. menambahkan kelipatan satu baris ke baris yang lain
 
-### bentuk eselon baris dan eselon baris teredukasi
+### Bentuk eselon baris dan eselon baris teredukasi
 - bentuk eselon baris : baris 0 dibawah sendiri, non 0 diatasnya
 - eselon baris teredukasi : memenuhi persamaan garis , pivot bernilai 1 
 
@@ -29,9 +29,12 @@ koefisien linier adalah sesuatu yang melekat pada variable
 1. matrix augmentasi : mengubah persamaan ke matrix
 
 contoh : | menandakan koefisien
-[1 2  1 | 9]
-[2 1 -1 | 3]
-[3 -1 2 | 8] ukuran matrix 3 x 4
+$$\[
+\begin{bmatrix} 
+1 & 2 & 1 & \vert & 9 \\ 
+2 & 1 & -1 & \vert & 3 \\ 
+3 & -1 & 2 & \vert & 8 
+\end{bmatrix}\]$$
 
 dari persamaan :
 x + 2y + z = 9
