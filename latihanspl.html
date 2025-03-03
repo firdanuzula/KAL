@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>tes &#8212; KAL</title>
+    <title>Penyelesaian Sistem Persamaan Linear &#8212; KAL</title>
   
   
   
@@ -60,10 +60,12 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'latihanspl';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Penyelesaian Sistem Persamaan Linear" href="intro.html" />
+    <link rel="prev" title="Persamaan Linier" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -163,12 +165,12 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Penyelesaian Sistem Persamaan Linear
+                    Persamaan Linier
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">tes</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Penyelesaian Sistem Persamaan Linear</a></li>
 </ul>
 
     </div>
@@ -338,7 +340,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -349,11 +353,22 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>tes</h1>
+    <h1>Penyelesaian Sistem Persamaan Linear</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-1">nomor 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-2">nomor 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-3">nomor 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-4">nomor 4</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -363,8 +378,272 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="tes">
-<h1>tes<a class="headerlink" href="#tes" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="penyelesaian-sistem-persamaan-linear">
+<h1>Penyelesaian Sistem Persamaan Linear<a class="headerlink" href="#penyelesaian-sistem-persamaan-linear" title="Link to this heading">#</a></h1>
+<section id="nomor-1">
+<h2>nomor 1<a class="headerlink" href="#nomor-1" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1+2x_2+3x_3=6\\
+2x_1+4x_2+6x_3=12\\
+x_3+x_2=2\\
+\end{array}
+\end{split}\]</div>
+<p>Penyelesaian:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{array}{cc} x_1 + 2x_2 + 3x_3 = 6 \\ 2x_1 + 4x_2 + 6x_3 = 12 \\ x_3 + x_2 = 2 \\ \end{array} \end{split}\]</div>
+<p>Matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; | &amp; 6 \\ 2 &amp; 4 &amp; 6 &amp; | &amp; 12 \\ 0 &amp; 1 &amp; 1 &amp; | &amp; 2 \\ \end{bmatrix} \end{split}\]</div>
+<p>Baris kedua dikurangi 2 kali baris pertama:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} \begin{bmatrix} 1 &amp; 2 &amp; 3 &amp; | &amp; 6 \\ 0 &amp; 0 &amp; 0 &amp; | &amp; 0 \\ 0 &amp; 1 &amp; 1 &amp; | &amp; 2\\ \end{bmatrix} \end{split}\]</div>
+<p>Maka,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} x_1 + 2x_2 + 3x_3 + 6 = x_1 + 2(2 - x_3) + 3x_3 = 6 \\ x_1+ 4 -2x_2 + 3x_3 = 6\\ x_1+x_3 = 6 - 4\\ x_1 = 2 - x_3  \end{split}\]</div>
+<p>Karna ada variabel bebas $<span class="math notranslate nohighlight">\(x_3 = t \)</span>$ Sehingga, solusi umum dari sistem persamaan tersebut adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{aligned} x_1 &amp;= 2-t, \\ x_2 &amp;= 2-t, \\ x_3 &amp;= t, \quad t \in \mathbb{R}. \end{aligned}\end{split}\]</div>
+</section>
+<section id="nomor-2">
+<h2>nomor 2<a class="headerlink" href="#nomor-2" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{cc}
+x_1+x_2+x_3=3\\
+2x_1+x_3=5\\
+x_1+2x_2=3\\
+\end{array}
+\end{split}\]</div>
+<p>Penyelesaian :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccc|c}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+2 &amp; 0 &amp; 1 &amp; 5 \\
+1 &amp; 2 &amp; 0 &amp; 3
+\end{array}\end{split}\]</div>
+<p>Langkah 1: Eliminasi Baris Pertama
+Kita akan mengeliminasi elemen di bawah elemen pertama pada kolom pertama dengan mengurangi baris kedua dengan 2 kali baris pertama dan mengurangi baris ketiga dengan baris pertama.</p>
+<ul class="simple">
+<li><p>Baris 2 → Baris 2 - 2 × Baris 1</p></li>
+<li><p>Baris 3 → Baris 3 - Baris 1</p></li>
+</ul>
+<p>Maka hasilnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccc|c}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+0 &amp; -2 &amp; -1 &amp; -1 \\
+0 &amp; 1 &amp; -1 &amp; 0
+\end{array}\end{split}\]</div>
+<p>Langkah 2: Eliminasi Baris Kedua
+Sekarang kita akan mengeliminasi elemen di bawah elemen kedua pada kolom kedua dengan menambah baris ketiga dengan setengah baris kedua.</p>
+<ul class="simple">
+<li><p>Baris 3 → Baris 3 + 1/2 dikali baris 2</p></li>
+</ul>
+<p>Hasilnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccc|c}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+0 &amp; -2 &amp; -1 &amp; -1 \\
+0 &amp; 0 &amp; -\frac{3}{2} &amp; -\frac{1}{2}
+\end{array}\end{split}\]</div>
+<p>Langkah 3: Normalisasi Baris Ketiga
+Kita akan mengalikan baris ketiga dengan (-\frac{2}{3}) untuk menjadikan elemen di baris ketiga, kolom ketiga menjadi 1:</p>
+<ul class="simple">
+<li><p>Baris 3 → -2/3 dikali baris 3</p></li>
+</ul>
+<p>Hasilnya menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccc|c}
+1 &amp; 1 &amp; 1 &amp; 3 \\
+0 &amp; -2 &amp; -1 &amp; -1 \\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{3}
+\end{array}\end{split}\]</div>
+<p>Langkah 4: Eliminasi Kolom Ketiga
+Sekarang kita akan mengeliminasi elemen-elemen di atas kolom ketiga.</p>
+<ul class="simple">
+<li><p>Baris 1 → Baris 1 - Baris 3</p></li>
+<li><p>Baris 2 → Baris 2 + Baris 3</p></li>
+</ul>
+<p>Maka hasilnya adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccc|c}
+1 &amp; 1 &amp; 0 &amp; \frac{8}{3} \\
+0 &amp; -2 &amp; 0 &amp; -\frac{2}{3} \\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{3}
+\end{array}\end{split}\]</div>
+<p>Langkah 5: Normalisasi Baris Kedua
+Kita akan mengalikan baris kedua dengan -1/2 untuk menjadikan elemen di baris kedua, kolom kedua menjadi 1:</p>
+<ul class="simple">
+<li><p>Baris 2 → -1/2 x baris 2</p></li>
+</ul>
+<p>Hasilnya menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccc|c}
+1 &amp; 1 &amp; 0 &amp; \frac{8}{3} \\
+0 &amp; 1 &amp; 0 &amp; \frac{1}{3} \\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{3}
+\end{array}\end{split}\]</div>
+<p>Langkah 6: Eliminasi Kolom Kedua
+Sekarang kita akan mengeliminasi elemen di atas kolom kedua.</p>
+<ul class="simple">
+<li><p>Baris 1 → Baris 1 - Baris 2</p></li>
+</ul>
+<p>Hasil akhirnya menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{ccc|c}
+1 &amp; 0 &amp; 0 &amp; \frac{7}{3} \\
+0 &amp; 1 &amp; 0 &amp; \frac{1}{3} \\
+0 &amp; 0 &amp; 1 &amp; \frac{1}{3}
+\end{array}\end{split}\]</div>
+<p>Solusi
+Solusi akhir dari persamaan diatas adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{cc}
+x_1=\frac{7}{3} \\
+x_2=\frac{1}{3} \\
+x_3=\frac{1}{3}
+\end{array}\end{split}\]</div>
+</section>
+<section id="nomor-3">
+<h2>nomor 3<a class="headerlink" href="#nomor-3" title="Link to this heading">#</a></h2>
+<p>Diberikan sistem persamaan:</p>
+<div class="math notranslate nohighlight">
+\[
+2x_1 + 2x_2 = 4
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x_1 + x_2 = 2
+\]</div>
+<p>Kita akan menyelesaikannya menggunakan metode eliminasi Gauss. Pertama, kita tuliskan sistem ini dalam bentuk matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+2 &amp; 2 &amp; | &amp; 4 \\
+1 &amp; 1 &amp; | &amp; 2
+\end{bmatrix}
+\end{split}\]</div>
+<p>Langkah pertama adalah membuat elemen di bawah pivot menjadi nol. Kita lakukan operasi berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+R_1 \leftarrow R_1 - 2R_2
+\]</div>
+<p>Setelah melakukan perhitungan, kita mendapatkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_1: \quad 2 - 2 \cdot 1 = 0 \\
+2 - 2 \cdot 1 = 0 \\
+4 - 2 \cdot 2 = 0
+\end{split}\]</div>
+<p>Sehingga, matriks augmented menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; | &amp; 2 \\
+0 &amp; 0 &amp; | &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Dari baris kedua, kita dapat mengekspresikan <span class="math notranslate nohighlight">\((x_1)\)</span> dalam bentuk <span class="math notranslate nohighlight">\((x_2)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + x_2 = 2 \implies x_1 = 2 - x_2
+\]</div>
+<p>Karena kita memiliki satu persamaan dengan dua variabel, kita dapat menyatakan solusi dalam bentuk parameter. Misalkan <span class="math notranslate nohighlight">\((x_2 = t)\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 = 2 - t
+\]</div>
+<p>Jadi, solusi umum dari sistem persamaan ini adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x_1 = 2 - t \\
+x_2 = t
+\end{cases}
+\end{split}\]</div>
+<p>di mana <span class="math notranslate nohighlight">\((t)\)</span> adalah parameter bebas.</p>
+</section>
+<section id="nomor-4">
+<h2>nomor 4<a class="headerlink" href="#nomor-4" title="Link to this heading">#</a></h2>
+<p>Diberikan sistem persamaan:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + x_2 = 5
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x_1 + 2x_3 = 6
+\]</div>
+<p>Kita akan menyelesaikannya menggunakan metode eliminasi Gauss. Pertama, kita tuliskan sistem ini dalam bentuk matriks augmented:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 0 &amp; | &amp; 5 \\
+1 &amp; 0 &amp; 2 &amp; | &amp; 6
+\end{bmatrix}
+\end{split}\]</div>
+<p>Langkah pertama adalah membuat elemen di bawah pivot (elemen pertama di kolom pertama) menjadi nol. Kita lakukan operasi berikut:</p>
+<div class="math notranslate nohighlight">
+\[
+R_2 \leftarrow R_2 - R_1
+\]</div>
+<p>Setelah melakukan perhitungan, kita mendapatkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+R_2: \quad 1 - 1 = 0 \\
+0 - 1 = -1 \\
+2 - 0 = 2 \\
+6 - 5 = 1
+\end{split}\]</div>
+<p>Sehingga, matriks augmented menjadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 1 &amp; 0 &amp; | &amp; 5 \\
+0 &amp; -1 &amp; 2 &amp; | &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Selanjutnya, kita dapat menyelesaikan baris kedua untuk mengekspresikan (x_2) dalam bentuk (x_3):</p>
+<div class="math notranslate nohighlight">
+\[
+-1x_2 + 2x_3 = 1 \implies x_2 = 2x_3 - 1
+\]</div>
+<p>Sekarang kita substitusi (x_2) ke dalam persamaan pertama:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + (2x_3 - 1) = 5
+\]</div>
+<p>Maka kita dapatkan:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 + 2x_3 - 1 = 5 \implies x_1 = 6 - 2x_3
+\]</div>
+<p>Karena kita memiliki dua persamaan dengan tiga variabel, kita dapat menyatakan solusi dalam bentuk parameter. Misalkan (x_3 = p), maka:</p>
+<div class="math notranslate nohighlight">
+\[
+x_1 = 6 - 2p
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x_2 = 2p - 1
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+x_3 = p
+\]</div>
+<p>Jadi, solusi umum dari sistem persamaan ini adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+x_1 = 6 - 2p \\
+x_2 = 2p - 1 \\
+x_3 = p
+\end{cases}
+\end{split}\]</div>
+<p>di mana (p) adalah parameter bebas.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -403,7 +682,7 @@
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Penyelesaian Sistem Persamaan Linear</p>
+        <p class="prev-next-title">Persamaan Linier</p>
       </div>
     </a>
 </div>
@@ -412,6 +691,25 @@
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-1">nomor 1</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-2">nomor 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-3">nomor 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#nomor-4">nomor 4</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
