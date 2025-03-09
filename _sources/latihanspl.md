@@ -141,6 +141,10 @@ x_2=\frac{1}{3} \\
 x_3=\frac{1}{3}
 \end{array}$$
 
+berikut adalah gambar vektornya :
+
+<iframe src="https://www.geogebra.org/classic/jmccwhfc?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
 ### nomor 3
 Diberikan sistem persamaan:
 
