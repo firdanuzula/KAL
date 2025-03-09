@@ -491,103 +491,75 @@ B = \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{bmatrix} \)</span></p>
 <p><span class="math notranslate nohighlight">\( c_{ij} = \sum_{k=1}^{n} a_{ik} \times b_{kj} \)</span></p>
 <p>Di mana:</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(\item \)</span>a_{ik}<span class="math notranslate nohighlight">\( adalah elemen baris ke-\)</span>i<span class="math notranslate nohighlight">\( dan kolom ke-\)</span>k<span class="math notranslate nohighlight">\( dari matriks \textbf{A}\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\item \)</span>b_{kj}<span class="math notranslate nohighlight">\( adalah elemen baris ke-\)</span>k<span class="math notranslate nohighlight">\( dan kolom ke-\)</span>j$ dari matriks \textbf{B}</p></li>
-<li><p><span class="math notranslate nohighlight">\(\item \)</span>c_{ij}<span class="math notranslate nohighlight">\( adalah elemen hasil pada baris ke-\)</span>i<span class="math notranslate nohighlight">\( dan kolom ke-\)</span>j$</p></li>
+<li><p><span class="math notranslate nohighlight">\( a_{ik} adalah elemen baris ke-\)</span>i<span class="math notranslate nohighlight">\( dan kolom ke-\)</span>k<span class="math notranslate nohighlight">\( dari matriks {A}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( b_{kj} adalah elemen baris ke-\)</span>k<span class="math notranslate nohighlight">\( dan kolom ke-\)</span>j<span class="math notranslate nohighlight">\( dari matriks {B} \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( c_{ij} adalah elemen hasil pada baris ke-\)</span>i<span class="math notranslate nohighlight">\( dan kolom ke-\)</span>j $</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># function membuat matriks</span>
-
-<span class="k">def</span> <span class="nf">input_matriks</span><span class="p">(</span><span class="n">nama_matriks</span><span class="p">,</span> <span class="n">baris</span><span class="p">,</span> <span class="n">kolom</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">buat_matriks</span><span class="p">(</span><span class="n">baris</span><span class="p">,</span> <span class="n">kolom</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
     <span class="n">matriks</span> <span class="o">=</span> <span class="p">[]</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Masukkan elemen </span><span class="si">{</span><span class="n">nama_matriks</span><span class="si">}</span><span class="s2"> (</span><span class="si">{</span><span class="n">baris</span><span class="si">}</span><span class="s2">x</span><span class="si">{</span><span class="n">kolom</span><span class="si">}</span><span class="s2">):&quot;</span><span class="p">)</span>
-
+    <span class="n">indeks</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">baris</span><span class="p">):</span>
         <span class="n">baris_matriks</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">kolom</span><span class="p">):</span>
-            <span class="n">elemen</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Masukkan elemen baris </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">, kolom </span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: &quot;</span><span class="p">))</span>
-            <span class="n">baris_matriks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elemen</span><span class="p">)</span>
+            <span class="n">baris_matriks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">indeks</span><span class="p">])</span>
+            <span class="n">indeks</span> <span class="o">+=</span> <span class="mi">1</span>
         <span class="n">matriks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">baris_matriks</span><span class="p">)</span>
-
     <span class="k">return</span> <span class="n">matriks</span>
 
-<span class="c1"># function perkalian matriks</span>
+<span class="c1"># Fungsi untuk perkalian matriks</span>
+<span class="k">def</span> <span class="nf">perkalian_matriks</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">):</span>
+    <span class="n">hasil</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m1</span><span class="p">)):</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">[</span><span class="mi">0</span><span class="p">])):</span>
+            <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">)):</span>
+                <span class="n">total</span> <span class="o">+=</span> <span class="n">m1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">m2</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+        <span class="n">hasil</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">hasil</span>
 
-<span class="k">def</span> <span class="nf">perkalian</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">):</span>
-  <span class="n">MatBaru</span><span class="o">=</span><span class="p">[]</span>
-  <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m1</span><span class="p">))</span> <span class="p">:</span>
-    <span class="n">temp</span><span class="o">=</span><span class="p">[]</span>
-    <span class="n">MatBaru</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span> <span class="p">:</span>
-      <span class="n">total</span><span class="o">=</span><span class="mi">0</span>
-      <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">m2</span><span class="p">))</span> <span class="p">:</span>
-        <span class="n">total</span><span class="o">=</span><span class="n">total</span><span class="o">+</span><span class="p">(</span><span class="n">m1</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">m2</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">])</span>
-      <span class="n">temp</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+<span class="c1"># Data untuk matriks 1 dan matriks 2 (tanpa input dari pengguna)</span>
+<span class="n">data_m1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">data_m2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">25</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]</span>
 
-  <span class="k">return</span> <span class="n">MatBaru</span>
+<span class="c1"># Membuat matriks 2x2</span>
+<span class="n">m1</span> <span class="o">=</span> <span class="n">buat_matriks</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">data_m1</span><span class="p">)</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">buat_matriks</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">data_m2</span><span class="p">)</span>
 
-<span class="c1"># input Matriks</span>
-<span class="n">m1</span> <span class="o">=</span> <span class="n">input_matriks</span><span class="p">(</span><span class="s2">&quot;matriks 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">()</span>
-<span class="n">m2</span> <span class="o">=</span> <span class="n">input_matriks</span><span class="p">(</span><span class="s2">&quot;matriks 2&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c1"># Menampilkan matriks 1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks 1:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">m1</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;matriks 1 : &quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">m1</span> <span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Matriks 2:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">m2</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;matriks 2 : &quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">baris1</span> <span class="ow">in</span> <span class="n">m1</span> <span class="p">:</span>
-  <span class="nb">print</span><span class="p">(</span><span class="n">baris1</span><span class="p">)</span>
+<span class="c1"># Mengalikan matriks</span>
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">perkalian_matriks</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
 
-
-<span class="c1"># perkalian matriks53</span>
-<span class="n">hasil</span> <span class="o">=</span> <span class="n">perkalian</span><span class="p">(</span><span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">)</span>
-
-<span class="nb">print</span><span class="p">()</span>
-
-<span class="c1"># hasil perkalian</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;hasil perkalian matriks 1 dan matriks 2:&quot;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">baris2</span> <span class="ow">in</span> <span class="n">hasil</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">baris2</span><span class="p">)</span>
+<span class="c1"># Menampilkan hasil perkalian matriks</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil Perkalian Matriks:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">hasil</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Masukkan elemen matriks 1 (2x2):
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">33</span>
-<span class="g g-Whitespace">     </span><span class="mi">30</span>   <span class="k">return</span> <span class="n">MatBaru</span>
-<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="c1"># input Matriks</span>
-<span class="ne">---&gt; </span><span class="mi">33</span> <span class="n">m1</span> <span class="o">=</span> <span class="n">input_matriks</span><span class="p">(</span><span class="s2">&quot;matriks 1&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">34</span> <span class="nb">print</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">35</span> <span class="n">m2</span> <span class="o">=</span> <span class="n">input_matriks</span><span class="p">(</span><span class="s2">&quot;matriks 2&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks 1:
+[1, 2]
+[3, 4]
 
-<span class="nn">Cell In[2], line 11,</span> in <span class="ni">input_matriks</span><span class="nt">(nama_matriks, baris, kolom)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">baris_matriks</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">kolom</span><span class="p">):</span>
-<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="n">elemen</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Masukkan elemen baris </span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">, kolom </span><span class="si">{</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: &quot;</span><span class="p">))</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">baris_matriks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elemen</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="n">matriks</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">baris_matriks</span><span class="p">)</span>
+Matriks 2:
+[25, 24]
+[23, 22]
 
-<span class="nn">File ~/.local/lib/python3.12/site-packages/ipykernel/kernelbase.py:1281,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1279</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1280</span>     <span class="n">msg</span> <span class="o">=</span> <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1281</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1282</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1283</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1284</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1285</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1286</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1287</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+Hasil Perkalian Matriks:
+[71, 68]
+[167, 160]
 </pre></div>
 </div>
 </div>
