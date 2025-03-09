@@ -373,11 +373,11 @@
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks">4. Perkalian Matriks</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Perkalian Skala dengan Matriks</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-penjumlahan-matriks">Konsep Penjumlahan Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matriks">Konsep Perkalian Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dalam-matriks">Perkalian Skalar dalam Matriks</a></li>
 </ul>
             </nav>
         </div>
@@ -448,9 +448,6 @@ B = \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{bmatrix} \)</span></p>
 \end{bmatrix} \)</span></p>
 </section>
 </section>
-<section id="id1">
-<h3>Perkalian Skala dengan Matriks<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
-</section>
 </section>
 <section id="konsep-penjumlahan-matriks">
 <h2>Konsep Penjumlahan Matriks<a class="headerlink" href="#konsep-penjumlahan-matriks" title="Link to this heading">#</a></h2>
@@ -493,7 +490,7 @@ B = \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{bmatrix} \)</span></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\( a_{ik}\)</span> adalah elemen baris ke-<span class="math notranslate nohighlight">\(i\)</span> dan kolom ke-<span class="math notranslate nohighlight">\(k\)</span> dari matriks A</p></li>
 <li><p><span class="math notranslate nohighlight">\( b_{kj}\)</span> adalah elemen baris ke-<span class="math notranslate nohighlight">\(k\)</span> dan kolom ke-<span class="math notranslate nohighlight">\(j\)</span> dari matriks B</p></li>
-<li><p><span class="math notranslate nohighlight">\( c_{ij}\)</span> adalah elemen hasil pada baris ke-<span class="math notranslate nohighlight">\(i\)</span> dan kolom ke-<span class="math notranslate nohighlight">\(j\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\( c_{ij}\)</span> adalah elemen hasil pada baris ke-<span class="math notranslate nohighlight">\(i\)</span> dan kolom ke-<span class="math notranslate nohighlight">\(j\)</span> dari matriks C</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -565,6 +562,68 @@ Hasil Perkalian Matriks:
 </div>
 </div>
 </section>
+<section id="perkalian-skalar-dalam-matriks">
+<h2>Perkalian Skalar dalam Matriks<a class="headerlink" href="#perkalian-skalar-dalam-matriks" title="Link to this heading">#</a></h2>
+<p>Perkalian skalar dalam matriks adalah operasi di mana setiap elemen dalam matriks dikalikan dengan suatu bilangan tetap (skalar).</p>
+<p>Jika diberikan sebuah matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m \times n\)</span> dan skalar <span class="math notranslate nohighlight">\(k\)</span>, maka hasil perkalian skalar dinotasikan sebagai:</p>
+<p><span class="math notranslate nohighlight">\(C = k \times A\)</span></p>
+<p>dengan elemen-elemen hasilnya:</p>
+<p><span class="math notranslate nohighlight">\(c_{ij} = k \times a_{ij}\)</span></p>
+<p>di mana:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(c_{ij}\)</span> adalah elemen hasil perkalian pada baris ke-<span class="math notranslate nohighlight">\(i\)</span> dan kolom ke-<span class="math notranslate nohighlight">\(j\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span> adalah skalar (bilangan tetap).</p></li>
+<li><p><span class="math notranslate nohighlight">\(a_{ij}\)</span> adalah elemen asli dari matriks <span class="math notranslate nohighlight">\(A\)</span></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Fungsi untuk melakukan perkalian skalar dengan matriks</span>
+<span class="k">def</span> <span class="nf">perkalian_skalar_matriks</span><span class="p">(</span><span class="n">skal</span><span class="p">,</span> <span class="n">matriks</span><span class="p">):</span>
+    <span class="n">hasil</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">matriks</span><span class="p">:</span>
+        <span class="n">baris_hasil</span> <span class="o">=</span> <span class="p">[</span><span class="n">skal</span> <span class="o">*</span> <span class="n">elemen</span> <span class="k">for</span> <span class="n">elemen</span> <span class="ow">in</span> <span class="n">baris</span><span class="p">]</span>
+        <span class="n">hasil</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">baris_hasil</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">hasil</span>
+
+<span class="c1"># Contoh matriks</span>
+<span class="n">matriks</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="p">]</span>
+
+<span class="c1"># Skalar</span>
+<span class="n">skalar</span> <span class="o">=</span> <span class="mi">3</span>
+
+<span class="c1"># Perkalian skalar dengan matriks</span>
+<span class="n">hasil_perkalian</span> <span class="o">=</span> <span class="n">perkalian_skalar_matriks</span><span class="p">(</span><span class="n">skalar</span><span class="p">,</span> <span class="n">matriks</span><span class="p">)</span>
+
+<span class="c1"># Menampilkan hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matriks Asli:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">matriks</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hasil Perkalian dengan Skalar&quot;</span><span class="p">,</span> <span class="n">skalar</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">baris</span> <span class="ow">in</span> <span class="n">hasil_perkalian</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">baris</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matriks Asli:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+
+Hasil Perkalian dengan Skalar 3 :
+[3, 6, 9]
+[12, 15, 18]
+[21, 24, 27]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -631,11 +690,11 @@ Hasil Perkalian Matriks:
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks">4. Perkalian Matriks</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Perkalian Skala dengan Matriks</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-penjumlahan-matriks">Konsep Penjumlahan Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matriks">Konsep Perkalian Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dalam-matriks">Perkalian Skalar dalam Matriks</a></li>
 </ul>
   </nav></div>
 
