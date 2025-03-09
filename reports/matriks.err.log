@@ -1,0 +1,111 @@
+Traceback (most recent call last):
+  File "/usr/local/python/3.12.1/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/asyncio/base_events.py", line 684, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/codespace/.local/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# function membuat matriks
+
+def input_matriks(nama_matriks, baris, kolom):
+    matriks = []
+
+    print(f"Masukkan elemen {nama_matriks} ({baris}x{kolom}):")
+
+    for i in range(baris):
+        baris_matriks = []
+        for j in range(kolom):
+            elemen = int(input(f"Masukkan elemen baris {i+1}, kolom {j+1}: "))
+            baris_matriks.append(elemen)
+        matriks.append(baris_matriks)
+
+    return matriks
+
+# function perkalian matriks
+
+def perkalian(m1, m2):
+  MatBaru=[]
+  for i in range(len(m1)) :
+    temp=[]
+    MatBaru.append(temp)
+    for j in range(len(m2[0])) :
+      total=0
+      for k in range(len(m2)) :
+        total=total+(m1[i][k] * m2[k][j])
+      temp.append(total)
+
+  return MatBaru
+
+# input Matriks
+m1 = input_matriks("matriks 1", 2, 2)
+print()
+m2 = input_matriks("matriks 2", 2, 2)
+
+print()
+print(f"matriks 1 : ")
+for baris in m1 :
+  print(baris)
+
+print()
+print(f"matriks 2 : ")
+for baris1 in m1 :
+  print(baris1)
+
+
+# perkalian matriks53
+hasil = perkalian(m1, m2)
+
+print()
+
+# hasil perkalian
+print("hasil perkalian matriks 1 dan matriks 2:")
+for baris2 in hasil:
+    print(baris2)
+------------------
+
+----- stdout -----
+Masukkan elemen matriks 1 (2x2):
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+Cell [0;32mIn[2], line 33[0m
+[1;32m     30[0m   [38;5;28;01mreturn[39;00m MatBaru
+[1;32m     32[0m [38;5;66;03m# input Matriks[39;00m
+[0;32m---> 33[0m m1 [38;5;241m=[39m [43minput_matriks[49m[43m([49m[38;5;124;43m"[39;49m[38;5;124;43mmatriks 1[39;49m[38;5;124;43m"[39;49m[43m,[49m[43m [49m[38;5;241;43m2[39;49m[43m,[49m[43m [49m[38;5;241;43m2[39;49m[43m)[49m
+[1;32m     34[0m [38;5;28mprint[39m()
+[1;32m     35[0m m2 [38;5;241m=[39m input_matriks([38;5;124m"[39m[38;5;124mmatriks 2[39m[38;5;124m"[39m, [38;5;241m2[39m, [38;5;241m2[39m)
+
+Cell [0;32mIn[2], line 11[0m, in [0;36minput_matriks[0;34m(nama_matriks, baris, kolom)[0m
+[1;32m      9[0m baris_matriks [38;5;241m=[39m []
+[1;32m     10[0m [38;5;28;01mfor[39;00m j [38;5;129;01min[39;00m [38;5;28mrange[39m(kolom):
+[0;32m---> 11[0m     elemen [38;5;241m=[39m [38;5;28mint[39m([38;5;28;43minput[39;49m[43m([49m[38;5;124;43mf[39;49m[38;5;124;43m"[39;49m[38;5;124;43mMasukkan elemen baris [39;49m[38;5;132;43;01m{[39;49;00m[43mi[49m[38;5;241;43m+[39;49m[38;5;241;43m1[39;49m[38;5;132;43;01m}[39;49;00m[38;5;124;43m, kolom [39;49m[38;5;132;43;01m{[39;49;00m[43mj[49m[38;5;241;43m+[39;49m[38;5;241;43m1[39;49m[38;5;132;43;01m}[39;49;00m[38;5;124;43m: [39;49m[38;5;124;43m"[39;49m[43m)[49m)
+[1;32m     12[0m     baris_matriks[38;5;241m.[39mappend(elemen)
+[1;32m     13[0m matriks[38;5;241m.[39mappend(baris_matriks)
+
+File [0;32m~/.local/lib/python3.12/site-packages/ipykernel/kernelbase.py:1281[0m, in [0;36mKernel.raw_input[0;34m(self, prompt)[0m
+[1;32m   1279[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_allow_stdin:
+[1;32m   1280[0m     msg [38;5;241m=[39m [38;5;124m"[39m[38;5;124mraw_input was called, but this frontend does not support input requests.[39m[38;5;124m"[39m
+[0;32m-> 1281[0m     [38;5;28;01mraise[39;00m StdinNotImplementedError(msg)
+[1;32m   1282[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_input_request(
+[1;32m   1283[0m     [38;5;28mstr[39m(prompt),
+[1;32m   1284[0m     [38;5;28mself[39m[38;5;241m.[39m_parent_ident[[38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m],
+[1;32m   1285[0m     [38;5;28mself[39m[38;5;241m.[39mget_parent([38;5;124m"[39m[38;5;124mshell[39m[38;5;124m"[39m),
+[1;32m   1286[0m     password[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[1;32m   1287[0m )
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+
