@@ -369,11 +369,13 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-aritmatika-matriks">Operasi Aritmatika Matriks</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-matriks">1. Penjumlahan Matriks</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pengurangan-matriks">2. Pengurangan Matriks</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-penjumlahan-matriks">Konsep Penjumlahan Matriks</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matriks">Konsep Perkalian Matriks</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skala-dengan-matriks">Perkalian Skala dengan Matriks</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skala-dengan-matriks">3. Perkalian Skala dengan Matriks</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks">4. Perkalian Matriks</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-penjumlahan-matriks">Konsep Penjumlahan Matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matriks">Konsep Perkalian Matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Perkalian Skala dengan Matriks</a></li>
 </ul>
 </li>
 </ul>
@@ -419,15 +421,41 @@
 <p><span class="math notranslate nohighlight">\(A - B = \begin{bmatrix} 1-5 &amp; 2-6 \\ 3-7 &amp; 4-8 \end{bmatrix}
 = \begin{bmatrix} -4 &amp; -4 \\ -4 &amp; -4 \end{bmatrix}\)</span></p>
 </section>
+<section id="perkalian-skala-dengan-matriks">
+<h4>3. Perkalian Skala dengan Matriks<a class="headerlink" href="#perkalian-skala-dengan-matriks" title="Link to this heading">#</a></h4>
+<p>Perkalian skalar dilakukan dengan mengalikan setiap elemen matriks dengan suatu bilangan skalar.</p>
+<p>Jika <span class="math notranslate nohighlight">\(k\)</span> adalah bilangan skalar, maka:</p>
+<p><span class="math notranslate nohighlight">\((kA) = k \times \begin{bmatrix} a_{11} &amp; a_{12} \\ a_{21} &amp; a_{22} \end{bmatrix}\)</span></p>
+<p>Contoh:</p>
+<p>Misalkan <span class="math notranslate nohighlight">\(k = 2\)</span> dan</p>
+<p><span class="math notranslate nohighlight">\(A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\)</span></p>
+<p>Maka:</p>
+<p><span class="math notranslate nohighlight">\( 2A = \begin{bmatrix} 2 \times 1 &amp; 2 \times 2 \\ 2 \times 3 &amp; 2 \times 4 \end{bmatrix} 
+= \begin{bmatrix} 2 &amp; 4 \\ 6 &amp; 8 \end{bmatrix} \)</span></p>
+</section>
+<section id="perkalian-matriks">
+<h4>4. Perkalian Matriks<a class="headerlink" href="#perkalian-matriks" title="Link to this heading">#</a></h4>
+<p>Jika <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m \times n\)</span> dan <span class="math notranslate nohighlight">\(B\)</span> berukuran <span class="math notranslate nohighlight">\(n \times p\)</span>, maka hasilnya adalah matriks <span class="math notranslate nohighlight">\(C\)</span> berukuran <span class="math notranslate nohighlight">\(m \times p\)</span>, dengan elemen-elemen dihitung sebagai:</p>
+<p><span class="math notranslate nohighlight">\(c_{ij} = \sum_{k=1}^{n} a_{ik} \cdot b_{kj}\)</span></p>
+<p>Misalkan:</p>
+<p><span class="math notranslate nohighlight">\( A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}, \quad 
+B = \begin{bmatrix} 5 &amp; 6 \\ 7 &amp; 8 \end{bmatrix} \)</span></p>
+<p>Maka:</p>
+<p><span class="math notranslate nohighlight">\( AB = 
+\begin{bmatrix} 
+(1 \times 5 + 2 \times 7) &amp; (1 \times 6 + 2 \times 8) \\ 
+(3 \times 5 + 4 \times 7) &amp; (3 \times 6 + 4 \times 8) 
+\end{bmatrix} \)</span></p>
+</section>
+</section>
 <section id="konsep-penjumlahan-matriks">
-<h4>Konsep Penjumlahan Matriks<a class="headerlink" href="#konsep-penjumlahan-matriks" title="Link to this heading">#</a></h4>
+<h3>Konsep Penjumlahan Matriks<a class="headerlink" href="#konsep-penjumlahan-matriks" title="Link to this heading">#</a></h3>
 </section>
 <section id="konsep-perkalian-matriks">
-<h4>Konsep Perkalian Matriks<a class="headerlink" href="#konsep-perkalian-matriks" title="Link to this heading">#</a></h4>
+<h3>Konsep Perkalian Matriks<a class="headerlink" href="#konsep-perkalian-matriks" title="Link to this heading">#</a></h3>
 </section>
-<section id="perkalian-skala-dengan-matriks">
-<h4>Perkalian Skala dengan Matriks<a class="headerlink" href="#perkalian-skala-dengan-matriks" title="Link to this heading">#</a></h4>
-</section>
+<section id="id1">
+<h3>Perkalian Skala dengan Matriks<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -492,11 +520,13 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#operasi-aritmatika-matriks">Operasi Aritmatika Matriks</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#penjumlahan-matriks">1. Penjumlahan Matriks</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pengurangan-matriks">2. Pengurangan Matriks</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-penjumlahan-matriks">Konsep Penjumlahan Matriks</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matriks">Konsep Perkalian Matriks</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skala-dengan-matriks">Perkalian Skala dengan Matriks</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skala-dengan-matriks">3. Perkalian Skala dengan Matriks</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-matriks">4. Perkalian Matriks</a></li>
 </ul>
 </li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-penjumlahan-matriks">Konsep Penjumlahan Matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matriks">Konsep Perkalian Matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Perkalian Skala dengan Matriks</a></li>
 </ul>
 </li>
 </ul>
