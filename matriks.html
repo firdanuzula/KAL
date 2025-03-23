@@ -378,6 +378,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dalam-matriks">Perkalian Skalar dalam Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-matriks-dengan-obe-tanpa-determinan">Mencari Invers Matriks dengan OBE (tanpa determinan)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks"><strong>Determinan Matriks</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-sarrus-hanya-untuk-matriks-3-times-3"><strong>Metode Sarrus (Hanya untuk Matriks <span class="math notranslate nohighlight">\(3 \times 3\)</span>)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matrik"><strong>Minor Matrik</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks"><strong>Cofaktor Matriks</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor">Mencari determinan dengan konsep Minor dan Cofaktor</a><ul class="nav section-nav flex-column">
@@ -770,6 +771,26 @@ Jika <span class="math notranslate nohighlight">\((\det(A) = 0)\)</span>, maka m
 </ul>
 <div class="math notranslate nohighlight">
 \[A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)\]</div>
+<section id="metode-sarrus-hanya-untuk-matriks-3-times-3">
+<h3><strong>Metode Sarrus (Hanya untuk Matriks <span class="math notranslate nohighlight">\(3 \times 3\)</span>)</strong><a class="headerlink" href="#metode-sarrus-hanya-untuk-matriks-3-times-3" title="Link to this heading">#</a></h3>
+<p>Metode ini hanya berlaku untuk matriks berukuran <span class="math notranslate nohighlight">\(3 \times 3\)</span>.</p>
+<p>Langkah-langkah:</p>
+<ul>
+<li><p>Tuliskan ulang dua kolom pertama di sebelah kanan matriks.</p></li>
+<li><p>Jumlahkan hasil perkalian diagonal utama, lalu kurangi hasil perkalian diagonal sekunder.
+Rumus :</p>
+<div class="math notranslate nohighlight">
+\[\text{det}(A) = (a_{11}a_{22}a_{33} + a_{12}a_{23}a_{31} + a_{13}a_{21}a_{32}) - (a_{13}a_{22}a_{31} + a_{11}a_{23}a_{32} + a_{12}a_{21}a_{33})\]</div>
+<p>Contoh:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+  1 &amp; 2 &amp; 3 \\
+  4 &amp; 5 &amp; 6 \\
+  7 &amp; 8 &amp; 9
+  \end{bmatrix}\end{split}\]</div>
+</li>
+</ul>
+</section>
 <section id="minor-matrik">
 <h3><strong>Minor Matrik</strong><a class="headerlink" href="#minor-matrik" title="Link to this heading">#</a></h3>
 <p>Minor : Nilai determinan submatriks yang diperoleh dengan menghapus baris dan kolom tertentu dari matriks.</p>
@@ -1343,6 +1364,7 @@ $<span class="math notranslate nohighlight">\(M_{13} = \begin{bmatrix}
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dalam-matriks">Perkalian Skalar dalam Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-matriks-dengan-obe-tanpa-determinan">Mencari Invers Matriks dengan OBE (tanpa determinan)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks"><strong>Determinan Matriks</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#metode-sarrus-hanya-untuk-matriks-3-times-3"><strong>Metode Sarrus (Hanya untuk Matriks <span class="math notranslate nohighlight">\(3 \times 3\)</span>)</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matrik"><strong>Minor Matrik</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks"><strong>Cofaktor Matriks</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor">Mencari determinan dengan konsep Minor dan Cofaktor</a><ul class="nav section-nav flex-column">
