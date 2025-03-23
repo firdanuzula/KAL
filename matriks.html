@@ -377,6 +377,12 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matriks">Konsep Perkalian Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dalam-matriks">Perkalian Skalar dalam Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-matriks-dengan-obe-tanpa-determinan">Mencari Invers Matriks dengan OBE (tanpa determinan)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks">Determinan Matriks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matrik">Minor Matrik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks">Cofaktor Matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor">Mencari determinan dengan konsep Minor dan Cofaktor</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -628,7 +634,7 @@ Hasil Perkalian dengan Skalar 3 :
 <p>Diketahui matriks:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A = \begin{bmatrix} -7 &amp; -6 &amp; -12 \\ 5 &amp; 5 &amp; 7 \\ 1 &amp; 0 &amp; 4 \end{bmatrix}\end{split}\]</div>
-<p>Kita bentuk matriks augmented $<span class="math notranslate nohighlight">\([A | I]\)</span>$:</p>
+<p>Kita bentuk matriks augmented $<span class="math notranslate nohighlight">\((\[A | I]\)\)</span>$:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left[ \begin{array}{ccc|ccc}
 -7 &amp; -6 &amp; -12 &amp; 1 &amp; 0 &amp; 0 \\
@@ -661,7 +667,7 @@ Hasil Perkalian dengan Skalar 3 :
 \end{array} \right]\end{split}\]</div>
 <ol class="arabic simple" start="3">
 <li><p>Langkah 3: Ubah elemen (2,2) menjadi 1 :
-Bagi baris kedua dengan $<span class="math notranslate nohighlight">\(\frac{5}{7}\)</span>$:</p></li>
+Bagi baris kedua dengan $<span class="math notranslate nohighlight">\((\frac{5}{7}\)\)</span>$:</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[R_2 \div \left(\frac{5}{7}\right)\]</div>
@@ -685,7 +691,7 @@ Bagi baris kedua dengan $<span class="math notranslate nohighlight">\(\frac{5}{7
 0 &amp; 0 &amp; \frac{5}{7} &amp; \frac{5}{7} &amp; \frac{3}{5} &amp; 1
 \end{array} \right]\end{split}\]</div>
 <ol class="arabic simple" start="5">
-<li><p>Langkah 5: Ubah elemen (3,3) menjadi 1. Bagi baris ketiga dengan $<span class="math notranslate nohighlight">\(\frac{5}{7}\)</span>$ :</p></li>
+<li><p>Langkah 5: Ubah elemen (3,3) menjadi 1. Bagi baris ketiga dengan $<span class="math notranslate nohighlight">\((\frac{5}{7}\)\)</span>$ :</p></li>
 </ol>
 <div class="math notranslate nohighlight">
 \[R_3 \div \left(\frac{5}{7}\right)\]</div>
@@ -697,17 +703,17 @@ Bagi baris kedua dengan $<span class="math notranslate nohighlight">\(\frac{5}{7
 \end{array} \right]\end{split}\]</div>
 <ol class="arabic simple" start="6">
 <li><p>Langkah 6: Nulakan elemen di atas pivot (kolom 3) :
-$<span class="math notranslate nohighlight">\(R_1 \rightarrow R_1 - \frac{9}{7} R_3\)</span>$</p></li>
+$<span class="math notranslate nohighlight">\(R_1 \rightarrow R_1 - (\frac{9}{7}\) R_3\)</span>$</p></li>
 </ol>
 <div class="math notranslate nohighlight">
-\[R_2 \rightarrow R_2 + \frac{1}{5} R_3\]</div>
+\[R_2 \rightarrow R_2 + (\frac{1}{5}\) R_3\]</div>
 <div class="math notranslate nohighlight">
 \[\begin{split}\left[ \begin{array}{ccc|ccc}
 1 &amp; 0 &amp; 0 &amp; -10 &amp; -12 &amp; -9 \\
 0 &amp; 1 &amp; 0 &amp; \frac{13}{2} &amp; 8 &amp; \frac{11}{2} \\
 0 &amp; 0 &amp; 1 &amp; \frac{5}{2} &amp; 3 &amp; \frac{5}{2}
 \end{array} \right]\end{split}\]</div>
-<p>Bagian kanan sekarang adalah $<span class="math notranslate nohighlight">\(A^{-1}\)</span>$ :</p>
+<p>Bagian kanan sekarang adalah $<span class="math notranslate nohighlight">\(\A^{-1}\)</span>$ :</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}A^{-1} =
 \begin{bmatrix}
@@ -716,6 +722,60 @@ $<span class="math notranslate nohighlight">\(R_1 \rightarrow R_1 - \frac{9}{7} 
 \frac{5}{2} &amp; 3 &amp; \frac{5}{2}
 \end{bmatrix}
 \end{split}\]</div>
+</section>
+<section id="determinan-matriks">
+<h2>Determinan Matriks<a class="headerlink" href="#determinan-matriks" title="Link to this heading">#</a></h2>
+<p>Determinan adalah nilai skalar yang dihitung dari elemen-elemen suatu matriks persegi. Determinan juga menyediakan informasi penting tentang sifat-sifat matriks, seperti apakah matriks memiliki invers atau tidak.</p>
+<p>Determinan adalah fungsi yang mengaitkan suatu matriks persegi $<span class="math notranslate nohighlight">\(\( A \)\)</span>$ dengan sebuah bilangan real (skalar).</p>
+<p>Determinan matriks $<span class="math notranslate nohighlight">\(\( A \)\)</span><span class="math notranslate nohighlight">\( ditulis sebagai \)</span><span class="math notranslate nohighlight">\(\( \det(A) \)\)</span><span class="math notranslate nohighlight">\( atau \)</span><span class="math notranslate nohighlight">\(\( |A| \)\)</span>$.</p>
+<p>Contoh Sederhana :</p>
+<p>Untuk matriks $<span class="math notranslate nohighlight">\(\( 2 \times 2 \)\)</span>$:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A =
+\begin{bmatrix}
+a &amp; b \\
+c &amp; d
+\end{bmatrix}
+, \quad \det(A) = ad - bc\end{split}\]</div>
+<p>Contoh:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A =
+\begin{bmatrix}
+1 &amp; 2 \\
+3 &amp; 4
+\end{bmatrix}
+, \quad \det(A) = (1 \cdot 4) - (2 \cdot 3) = 4 - 6 = -2\end{split}\]</div>
+<p><strong>Sifat-Sifat Determinan</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Determinan Matriks Identitas</strong><br />
+$<span class="math notranslate nohighlight">\(\(\det(I) = 1\)\)</span><span class="math notranslate nohighlight">\(, di mana \)</span><span class="math notranslate nohighlight">\(\(I\)\)</span>$ adalah matriks identitas.</p></li>
+<li><p><strong>Baris atau Kolom Nol</strong><br />
+Jika ada baris atau kolom yang semuanya nol, maka $<span class="math notranslate nohighlight">\(\(\det(A) = 0\)\)</span>$.</p></li>
+<li><p><strong>Pertukaran Baris/Kolom</strong><br />
+Jika dua baris atau kolom dipertukarkan, determinan berubah tanda.</p></li>
+<li><p><strong>Kelipatan Baris/Kolom</strong><br />
+Jika satu baris atau kolom dikalikan dengan skalar $<span class="math notranslate nohighlight">\(\(k\)\)</span><span class="math notranslate nohighlight">\(, maka determinan menjadi \)</span><span class="math notranslate nohighlight">\(\(k \cdot \det(A)\)\)</span>$.</p></li>
+<li><p><strong>Matriks Singular</strong><br />
+Jika $<span class="math notranslate nohighlight">\(\(\det(A) = 0\)\)</span><span class="math notranslate nohighlight">\(, maka matriks \)</span><span class="math notranslate nohighlight">\(\(A\)\)</span>$ disebut singular (tidak memiliki invers).</p></li>
+</ol>
+<p><strong>Mengapa Determinan Penting?</strong></p>
+<ul class="simple">
+<li><p>Digunakan untuk menentukan apakah suatu matriks memiliki invers $<span class="math notranslate nohighlight">\(\(\det(A) \neq 0\)\)</span>$.</p></li>
+<li><p>Digunakan dalam perhitungan invers matriks melalui rumus:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[A^{-1} = \frac{1}{\det(A)} \cdot \text{adj}(A)\]</div>
+<section id="minor-matrik">
+<h3>Minor Matrik<a class="headerlink" href="#minor-matrik" title="Link to this heading">#</a></h3>
+<p>Minor: Nilai determinan submatriks yang diperoleh dengan menghapus baris dan kolom tertentu dari matriks.</p>
+</section>
+<section id="cofaktor-matriks">
+<h3>Cofaktor Matriks<a class="headerlink" href="#cofaktor-matriks" title="Link to this heading">#</a></h3>
+<p>Cofactor: Hasil perkalian minor dengan faktor tanda $<span class="math notranslate nohighlight">\(\((-1)^{i+j}\)\)</span><span class="math notranslate nohighlight">\(, di mana \)</span><span class="math notranslate nohighlight">\(\(i\)\)</span><span class="math notranslate nohighlight">\( adalah indeks baris dan \)</span><span class="math notranslate nohighlight">\(\(j\)\)</span>$ adalah indeks kolom.</p>
+</section>
+<section id="mencari-determinan-dengan-konsep-minor-dan-cofaktor">
+<h3>Mencari determinan dengan konsep Minor dan Cofaktor<a class="headerlink" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor" title="Link to this heading">#</a></h3>
+</section>
 </section>
 </section>
 
@@ -787,6 +847,12 @@ $<span class="math notranslate nohighlight">\(R_1 \rightarrow R_1 - \frac{9}{7} 
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#konsep-perkalian-matriks">Konsep Perkalian Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#perkalian-skalar-dalam-matriks">Perkalian Skalar dalam Matriks</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-invers-matriks-dengan-obe-tanpa-determinan">Mencari Invers Matriks dengan OBE (tanpa determinan)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks">Determinan Matriks</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matrik">Minor Matrik</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks">Cofaktor Matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor">Mencari determinan dengan konsep Minor dan Cofaktor</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
