@@ -384,6 +384,7 @@
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-3-x-3">Matrix 3 x 3</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-4-x-4">Matrix 4 x 4</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-5-x-5">Matrix 5 x 5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Matrix 5 x 5</a></li>
 </ul>
 </li>
 </ul>
@@ -1064,6 +1065,270 @@ $<span class="math notranslate nohighlight">\(
 <section id="matrix-5-x-5">
 <h4>Matrix 5 x 5<a class="headerlink" href="#matrix-5-x-5" title="Link to this heading">#</a></h4>
 </section>
+<section id="id1">
+<h4>Matrix 5 x 5<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>Diketahui Matriks <span class="math notranslate nohighlight">\(A\)</span></p>
+<p>Matriks <span class="math notranslate nohighlight">\(5 \times 5\)</span> yang diberikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{pmatrix}
+2 &amp; -3 &amp; 1 &amp; -5 &amp; 4 \\
+1 &amp; 4 &amp; 2 &amp; 3 &amp; 5 \\
+3 &amp; 1 &amp; 5 &amp; 2 &amp; 4 \\
+5 &amp; 2 &amp; 4 &amp; 3 &amp; 1 \\
+4 &amp; 5 &amp; 3 &amp; 2 &amp; 1
+\end{pmatrix}\end{split}\]</div>
+<ul>
+<li><p>Minor <span class="math notranslate nohighlight">\(M_{11}\)</span></p>
+<p>Hapus baris ke-1 dan kolom ke-1 dari <span class="math notranslate nohighlight">\(A\)</span>, diperoleh submatriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{11} = \begin{pmatrix}
+  4 &amp; 2 &amp; 5 \\
+  1 &amp; 5 &amp; 2 \\
+  2 &amp; 4 &amp; 3 \\
+  5 &amp; 3 &amp; 1 
+  \end{pmatrix}\end{split}\]</div>
+<p>Hitung determinan <span class="math notranslate nohighlight">\(M_{11}\)</span> dengan ekspansi baris pertama:
+$$
+\text{det}(M_{11}) = 4 \cdot \begin{vmatrix}
+1 &amp; 5 &amp; 2 \
+2 &amp; 4 &amp; 3 \
+5 &amp; 3 &amp; 1
+\end{vmatrix}</p>
+<ul class="simple">
+<li><p>2 \cdot \begin{vmatrix}
+1 &amp; 5 &amp; 2 \
+2 &amp; 4 &amp; 3 \
+5 &amp; 3 &amp; 2
+\end{vmatrix}</p></li>
+</ul>
+<ul class="simple">
+<li><p>5 \cdot \begin{vmatrix}
+1 &amp; 4 &amp; 1 \
+2 &amp; 4 &amp; 1 \
+5 &amp; 2 &amp; 4
+\end{vmatrix}
+$$</p></li>
+</ul>
+<p>Hitung masing-masing determinan matriks <span class="math notranslate nohighlight">\(3 \times 3\)</span> dengan metode Sarrus.</p>
+<p>Submatriks <span class="math notranslate nohighlight">\(M_{11}\)</span> (setelah menghapus baris pertama dan kolom pertama dari <span class="math notranslate nohighlight">\(A\)</span>):
+$<span class="math notranslate nohighlight">\(
+M_{11} = \begin{bmatrix}
+5 &amp; 2 &amp; 4 \\
+4 &amp; 1 &amp; 3 \\
+3 &amp; 2 &amp; 1
+\end{bmatrix}\)</span>$</p>
+<p>Menggunakan metode Sarrus:
+$<span class="math notranslate nohighlight">\(
+\text{det}(M_{11}) = (5 \times 1 \times 1) + (2 \times 3 \times 4) + (4 \times 4 \times 2) - [(3 \times 1 \times 4) + (2 \times 4 \times 5) + (1 \times 2 \times 3)]\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+= (5 + 24 + 32) - (12 + 40 + 6)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(
+= 61 - 58 = 3\)</span>$</p>
+</li>
+<li><p>Minor <span class="math notranslate nohighlight">\(M_{12}\)</span></p>
+<p>Hapus baris ke-1 dan kolom ke-2 dari <span class="math notranslate nohighlight">\(A\)</span>, diperoleh submatriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{12} = \begin{pmatrix}
+  4 &amp; 2 &amp; 5 \\
+  1 &amp; 5 &amp; 2 \\
+  2 &amp; 4 &amp; 3 \\
+  5 &amp; 3 &amp; 1 
+  \end{pmatrix}\end{split}\]</div>
+<p>Hitung determinan <span class="math notranslate nohighlight">\(M_{12}\)</span> dengan ekspansi baris pertama:
+$$
+\text{det}(M_{12}) = 4 \cdot \begin{vmatrix}
+1 &amp; 5 &amp; 2 \
+2 &amp; 4 &amp; 3 \
+5 &amp; 3 &amp; 1
+\end{vmatrix}</p>
+<ul class="simple">
+<li><p>2 \cdot \begin{vmatrix}
+1 &amp; 5 &amp; 2 \
+2 &amp; 4 &amp; 3 \
+5 &amp; 3 &amp; 2
+\end{vmatrix}</p></li>
+</ul>
+<ul class="simple">
+<li><p>5 \cdot \begin{vmatrix}
+1 &amp; 4 &amp; 1 \
+2 &amp; 4 &amp; 1 \
+5 &amp; 2 &amp; 4
+\end{vmatrix}
+$$</p></li>
+</ul>
+<p>Submatriks <span class="math notranslate nohighlight">\(M_{12}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{12} = \begin{bmatrix}
+  3 &amp; 2 &amp; 4 \\
+  5 &amp; 1 &amp; 3 \\
+  4 &amp; 2 &amp; 1
+  \end{bmatrix}\end{split}\]</div>
+<p>Menggunakan metode Sarrus:
+$<span class="math notranslate nohighlight">\(\text{det}(M_{12}) = (3 \times 1 \times 1) + (2 \times 3 \times 4) + (4 \times 5 \times 2) - [(4 \times 1 \times 4) + (2 \times 5 \times 3) + (1 \times 2 \times 3)]\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= (3 + 24 + 40) - (16 + 30 + 6)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= 67 - 52 = 15\)</span>$</p>
+</li>
+<li><p>Minor <span class="math notranslate nohighlight">\(M_{13}\)</span></p>
+<p>Hapus baris ke-1 dan kolom ke-3 dari <span class="math notranslate nohighlight">\(A\)</span>, diperoleh submatriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{13} = \begin{pmatrix}
+  4 &amp; 2 &amp; 5 \\
+  1 &amp; 5 &amp; 2 \\
+  2 &amp; 4 &amp; 3 \\
+  5 &amp; 3 &amp; 1 
+  \end{pmatrix}\end{split}\]</div>
+<p>Hitung determinan <span class="math notranslate nohighlight">\(M_{13}\)</span> dengan ekspansi baris pertama:
+$$
+\text{det}(M_{13}) = 4 \cdot \begin{vmatrix}
+1 &amp; 5 &amp; 2 \
+2 &amp; 4 &amp; 3 \
+5 &amp; 3 &amp; 1
+\end{vmatrix}</p>
+<ul class="simple">
+<li><p>2 \cdot \begin{vmatrix}
+1 &amp; 5 &amp; 2 \
+2 &amp; 4 &amp; 3 \
+5 &amp; 3 &amp; 2
+\end{vmatrix}</p></li>
+</ul>
+<ul class="simple">
+<li><p>5 \cdot \begin{vmatrix}
+1 &amp; 4 &amp; 1 \
+2 &amp; 4 &amp; 1 \
+5 &amp; 2 &amp; 4
+\end{vmatrix}
+$$</p></li>
+</ul>
+<p>Submatriks <span class="math notranslate nohighlight">\((M_{13})\)</span>:
+$<span class="math notranslate nohighlight">\(
+M_{13} = \begin{bmatrix}
+3 &amp; 1 &amp; 4 \\
+5 &amp; 2 &amp; 3 \\
+4 &amp; 5 &amp; 1
+\end{bmatrix}\)</span>$</p>
+<p>Menggunakan metode Sarrus:
+$<span class="math notranslate nohighlight">\(\text{det}(M_{13}) = (3 \times 2 \times 1) + (1 \times 3 \times 4) + (4 \times 5 \times 5) - \left[(4 \times 2 \times 4) + (1 \times 5 \times 3) + (1 \times 3 \times 5)\right]\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= (6 + 12 + 100) - (32 + 15 + 15)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= 118 - 62 = 56\)</span>$</p>
+</li>
+<li><p>Minor <span class="math notranslate nohighlight">\(M_{14}\)</span></p>
+<p>Hapus baris ke-1 dan kolom ke-4 dari <span class="math notranslate nohighlight">\(A\)</span>, diperoleh submatriks:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{14} = \begin{pmatrix}
+  4 &amp; 2 &amp; 5 \\
+  1 &amp; 5 &amp; 2 \\
+  2 &amp; 4 &amp; 3 \\
+  5 &amp; 3 &amp; 1 
+  \end{pmatrix}\end{split}\]</div>
+<p>Hitung determinan <span class="math notranslate nohighlight">\(M_{14}\)</span> dengan ekspansi baris pertama:
+$$
+\text{det}(M_{14}) = 4 \cdot \begin{vmatrix}
+1 &amp; 5 &amp; 2 \
+2 &amp; 4 &amp; 3 \
+5 &amp; 3 &amp; 1
+\end{vmatrix}</p>
+<ul class="simple">
+<li><p>2 \cdot \begin{vmatrix}
+1 &amp; 5 &amp; 2 \
+2 &amp; 4 &amp; 3 \
+5 &amp; 3 &amp; 2
+\end{vmatrix}</p></li>
+</ul>
+<ul class="simple">
+<li><p>5 \cdot \begin{vmatrix}
+1 &amp; 4 &amp; 1 \
+2 &amp; 4 &amp; 1 \
+5 &amp; 2 &amp; 4
+\end{vmatrix}
+$$</p></li>
+</ul>
+<p>Submatriks <span class="math notranslate nohighlight">\((M_{14})\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  M_{14} = \begin{bmatrix}
+  3 &amp; 1 &amp; 5 \\
+  5 &amp; 2 &amp; 4 \\
+  4 &amp; 5 &amp; 3 
+  \end{bmatrix}\end{split}\]</div>
+<p>Menggunakan metode Sarrus:
+$<span class="math notranslate nohighlight">\(\text{det}(M_{14}) = (3 \times 2 \times 3) + (1 \times 4 \times 4) + (5 \times 5 \times 5) - \left[(5 \times 2 \times 5) + (1 \times 5 \times 3) + (3 \times 4 \times 4)\right]\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= (18 + 16 + 125) - (50 + 15 + 48)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= 159 - 113 = 46\)</span>$</p>
+</li>
+<li><p>Minor <span class="math notranslate nohighlight">\(M_{15}\)</span></p>
+<p>Hapus baris ke-1 dan kolom ke-5:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  M_{15} = \begin{bmatrix}
+  1 &amp; 4 &amp; 2 &amp; 3 \\
+  3 &amp; 1 &amp; 5 &amp; 2 \\
+  5 &amp; 2 &amp; 4 &amp; 1 \\
+  4 &amp; 5 &amp; 3 &amp; 2
+  \end{bmatrix}
+  \end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \text{det}(M_{15}) = 1 \begin{vmatrix}
+  1 &amp; 5 &amp; 2 \\
+  4 &amp; 5 &amp; 2 \\
+  5 &amp; 2 &amp; 4
+  \end{vmatrix} - 4 \begin{vmatrix}
+  3 &amp; 5 &amp; 2 \\
+  5 &amp; 2 &amp; 4 \\
+  4 &amp; 5 &amp; 3
+  \end{vmatrix} + 2 \begin{vmatrix}
+  3 &amp; 1 &amp; 5 \\
+  5 &amp; 2 &amp; 4 \\
+  4 &amp; 5 &amp; 3
+  \end{vmatrix} - 3 \begin{vmatrix}
+  3 &amp; 1 &amp; 5 \\
+  5 &amp; 2 &amp; 2 \\
+  4 &amp; 5 &amp; 2
+  \end{vmatrix}\end{split}\]</div>
+<p>Submatriks <span class="math notranslate nohighlight">\(M_{15}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M_{15} = \begin{bmatrix}
+  3 &amp; 1 &amp; 2 \\
+  5 &amp; 2 &amp; 1 \\
+  4 &amp; 5 &amp; 2
+  \end{bmatrix}\end{split}\]</div>
+<p>Menggunakan metode Sarrus:
+$<span class="math notranslate nohighlight">\(
+\text{det}(M_{15}) = (3 \times 2 \times 2) + (1 \times 1 \times 4) + (2 \times 5 \times 5) - [(4 \times 2 \times 2) + (5 \times 1 \times 3) + (2 \times 5 \times 5)]\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= (12 + 4 + 50) - (16 + 15 + 50)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(= 66 - 81 = -15\)</span>$</p>
+</li>
+<li><p>Langkah Terakhir: Substitusi ke Determinan Matriks <span class="math notranslate nohighlight">\((A)\)</span>
+Setelah mendapatkan semua minor, kita substitusi ke dalam ekspresi determinan utama:</p>
+<div class="math notranslate nohighlight">
+\[
+  \text{det}(A) = 2M_{11} - 3M_{12} + 1M_{13} - 5M_{14} + 4M_{15}
+  \]</div>
+<p>Substitusi hasil:</p>
+<div class="math notranslate nohighlight">
+\[
+  \text{det}(A) = 2(3) - 3(15) + 1(56) - 5(46) + 4(-15)
+  \]</div>
+<div class="math notranslate nohighlight">
+\[
+  = 6 - 45 + 56 - 230 - 60
+  \]</div>
+<div class="math notranslate nohighlight">
+\[
+  = -273
+  \]</div>
+<p>**Kesimpulan : **</p>
+<p>Setelah melalui semua proses perhitungan dengan metode Sarrus, kita mendapatkan bahwa determinannya adalah:
+$<span class="math notranslate nohighlight">\(\begin{align*}
+\det(A) &amp;= 2(3) - 3(15) + 1(56) - 5(46) + 4(-15) \\
+&amp;= 6 - 45 + 56 - 230 - 60 \\
+&amp;= -273
+\end{align*}\)</span>$</p>
+<p>Itulah perhitungan minor dan determinan matriks <span class="math notranslate nohighlight">\((5 \times 5)\)</span> secara rinci.</p>
+</li>
+</ul>
+</section>
 </section>
 </section>
 </section>
@@ -1143,6 +1408,7 @@ $<span class="math notranslate nohighlight">\(
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-3-x-3">Matrix 3 x 3</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-4-x-4">Matrix 4 x 4</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-5-x-5">Matrix 5 x 5</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Matrix 5 x 5</a></li>
 </ul>
 </li>
 </ul>
