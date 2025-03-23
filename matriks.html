@@ -380,7 +380,12 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks"><strong>Determinan Matriks</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matrik"><strong>Minor Matrik</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks"><strong>Cofaktor Matriks</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor">Mencari determinan dengan konsep Minor dan Cofaktor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor">Mencari determinan dengan konsep Minor dan Cofaktor</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-3-x-3">Matrix 3 x 3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-4-x-4">Matrix 4 x 4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-5-x-5">Matrix 5 x 5</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -800,19 +805,19 @@ $<span class="math notranslate nohighlight">\(\det(A) = \sum_{j=1}^{n} a_{ij} \c
 </section>
 <section id="mencari-determinan-dengan-konsep-minor-dan-cofaktor">
 <h3>Mencari determinan dengan konsep Minor dan Cofaktor<a class="headerlink" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor" title="Link to this heading">#</a></h3>
-<ul>
-<li><p><strong>Matrix 3 x 3</strong></p>
+<section id="matrix-3-x-3">
+<h4>Matrix 3 x 3<a class="headerlink" href="#matrix-3-x-3" title="Link to this heading">#</a></h4>
 <p>Diberikan matriks:
 $<span class="math notranslate nohighlight">\(A =
-\begin{bmatrix} 
-1 &amp; 2 &amp; 3 \\ 
-4 &amp; 5 &amp; 6 \\ 
-7 &amp; 8 &amp; 9 
-\end{bmatrix}\)</span>$</p>
+  \begin{bmatrix} 
+  1 &amp; 2 &amp; 3 \\ 
+  4 &amp; 5 &amp; 6 \\ 
+  7 &amp; 8 &amp; 9 
+  \end{bmatrix}\)</span>$</p>
 <p><strong>Menentukan Minor dan Cofaktor</strong></p>
 <p>Minor :
 $<span class="math notranslate nohighlight">\(
-M_{11} = \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} = (5 \cdot 9 - 6 \cdot 8) = -3\)</span>$</p>
+  M_{11} = \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} = (5 \cdot 9 - 6 \cdot 8) = -3\)</span>$</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
   M_{12} = \begin{vmatrix} 4 &amp; 6 \\ 7 &amp; 9 \end{vmatrix} = (4 \cdot 9 - 6 \cdot 7) = -6\end{split}\]</div>
@@ -821,23 +826,24 @@ M_{11} = \begin{vmatrix} 5 &amp; 6 \\ 8 &amp; 9 \end{vmatrix} = (5 \cdot 9 - 6 \
   M_{13} = \begin{vmatrix} 4 &amp; 5 \\ 7 &amp; 8 \end{vmatrix} = (4 \cdot 8 - 5 \cdot 7) = -3\end{split}\]</div>
 <p>Menghitung Determinan :
 $<span class="math notranslate nohighlight">\(
-\det(A) = 1(-3) - 2(-6) + 3(-3)\)</span>$</p>
+  \det(A) = 1(-3) - 2(-6) + 3(-3)\)</span>$</p>
 <div class="math notranslate nohighlight">
 \[
   = -3 + 12 - 9 = 0\]</div>
 <p>Karena <span class="math notranslate nohighlight">\((det(A) = 0)\)</span>, maka matriks ini singular dan tidak memiliki invers.</p>
-</li>
-<li><p><strong>Matrix 4 x 4</strong></p>
+</section>
+<section id="matrix-4-x-4">
+<h4>Matrix 4 x 4<a class="headerlink" href="#matrix-4-x-4" title="Link to this heading">#</a></h4>
 <p>Diberikan matriks:
 $<span class="math notranslate nohighlight">\(
-A =
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-5 &amp; 6 &amp; 7 &amp; 8 \\
-9 &amp; 10 &amp; 11 &amp; 12 \\
-13 &amp; 14 &amp; 15 &amp; 16
-\end{bmatrix}
-\)</span>$</p>
+  A =
+  \begin{bmatrix}
+  1 &amp; 2 &amp; 3 &amp; 4 \\
+  5 &amp; 6 &amp; 7 &amp; 8 \\
+  9 &amp; 10 &amp; 11 &amp; 12 \\
+  13 &amp; 14 &amp; 15 &amp; 16
+  \end{bmatrix}
+  \)</span>$</p>
 <p>Menggunakan Ekspansi Cofaktor :</p>
 <div class="math notranslate nohighlight">
 \[\det(A) = a_{11} C_{11} + a_{12} C_{12} + a_{13} C_{13} + a_{14} C_{14}\]</div>
@@ -848,13 +854,13 @@ A =
 <p>Hitung Minor dan Cofaktor :</p>
 <p>Misalkan matriks ( A ) adalah:
 $<span class="math notranslate nohighlight">\(
-A =
-\begin{bmatrix}
-1 &amp; 2 &amp; 3 &amp; 4 \\
-5 &amp; 6 &amp; 7 &amp; 8 \\
-9 &amp; 10 &amp; 11 &amp; 12 \\
-13 &amp; 14 &amp; 15 &amp; 16
-\end{bmatrix}\)</span>$</p>
+  A =
+  \begin{bmatrix}
+  1 &amp; 2 &amp; 3 &amp; 4 \\
+  5 &amp; 6 &amp; 7 &amp; 8 \\
+  9 &amp; 10 &amp; 11 &amp; 12 \\
+  13 &amp; 14 &amp; 15 &amp; 16
+  \end{bmatrix}\)</span>$</p>
 <ul class="simple">
 <li><p><strong>Minor <span class="math notranslate nohighlight">\((M_{11})\)</span> :</strong>
 $<span class="math notranslate nohighlight">\(
@@ -957,46 +963,46 @@ M_{13} =
 </ul>
 <p>Menggunakan ekspansi baris pertama:
 $<span class="math notranslate nohighlight">\(
-\text{det}(M_{13}) = 5 \begin{vmatrix} 
-10 &amp; 12 &amp; 16 \\ 
-9 &amp; 12 &amp; 16 \\ 
-9 &amp; 10 &amp; 14 
-\end{vmatrix} - 6 \begin{vmatrix} 
-10 &amp; 12 &amp; 14 \\ 
-9 &amp; 12 &amp; 13 \\ 
-9 &amp; 10 &amp; 14 
-\end{vmatrix} + 8 \begin{vmatrix} 
-10 &amp; 12 &amp; 14 \\ 
-9 &amp; 12 &amp; 16 \\ 
-9 &amp; 10 &amp; 10 
-\end{vmatrix}
-\)</span>$</p>
+  \text{det}(M_{13}) = 5 \begin{vmatrix} 
+  10 &amp; 12 &amp; 16 \\ 
+  9 &amp; 12 &amp; 16 \\ 
+  9 &amp; 10 &amp; 14 
+  \end{vmatrix} - 6 \begin{vmatrix} 
+  10 &amp; 12 &amp; 14 \\ 
+  9 &amp; 12 &amp; 13 \\ 
+  9 &amp; 10 &amp; 14 
+  \end{vmatrix} + 8 \begin{vmatrix} 
+  10 &amp; 12 &amp; 14 \\ 
+  9 &amp; 12 &amp; 16 \\ 
+  9 &amp; 10 &amp; 10 
+  \end{vmatrix}
+  \)</span>$</p>
 <p>Hitung masing-masing determinan <span class="math notranslate nohighlight">\((2 \times 2)\)</span> :
 $<span class="math notranslate nohighlight">\(
-\begin{vmatrix} 
-10 &amp; 12 \\ 
-14 &amp; 16 
-\end{vmatrix} = -8
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
-\begin{vmatrix} 
-9 &amp; 12 \\ 
-13 &amp; 16 
-\end{vmatrix} = -12
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
-\begin{vmatrix} 
-9 &amp; 10 \\ 
-13 &amp; 14 
-\end{vmatrix} = -4
-\)</span>$</p>
+  \begin{vmatrix} 
+  10 &amp; 12 \\ 
+  14 &amp; 16 
+  \end{vmatrix} = -8
+  \)</span><span class="math notranslate nohighlight">\(
+  \)</span><span class="math notranslate nohighlight">\(
+  \begin{vmatrix} 
+  9 &amp; 12 \\ 
+  13 &amp; 16 
+  \end{vmatrix} = -12
+  \)</span><span class="math notranslate nohighlight">\(
+  \)</span><span class="math notranslate nohighlight">\(
+  \begin{vmatrix} 
+  9 &amp; 10 \\ 
+  13 &amp; 14 
+  \end{vmatrix} = -4
+  \)</span>$</p>
 <p>Sehingga:
 $<span class="math notranslate nohighlight">\(
-\text{det}(M_{13}) = 5(-8) - 6(-12) + 8(-4)
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
-= -40 + 72 - 32 = 0
-\)</span>$</p>
+  \text{det}(M_{13}) = 5(-8) - 6(-12) + 8(-4)
+  \)</span><span class="math notranslate nohighlight">\(
+  \)</span><span class="math notranslate nohighlight">\(
+  = -40 + 72 - 32 = 0
+  \)</span>$</p>
 <ul class="simple">
 <li><p><strong>Minor <span class="math notranslate nohighlight">\((M_{14})\)</span> :</strong>
 $<span class="math notranslate nohighlight">\(
@@ -1009,24 +1015,24 @@ M_{14} =
 </ul>
 <p>Menggunakan ekspansi baris pertama:
 $<span class="math notranslate nohighlight">\(
-\det(M_{14}) = 5 \begin{vmatrix}
-10 &amp; 11 \\
-14 &amp; 15 
-\end{vmatrix} - 6 \begin{vmatrix}
-9 &amp; 11 \\
-13 &amp; 15 
-\end{vmatrix} + 7 \begin{vmatrix}
-9 &amp; 13 \\
-10 &amp; 14 
-\end{vmatrix}
-\)</span>$</p>
+  \det(M_{14}) = 5 \begin{vmatrix}
+  10 &amp; 11 \\
+  14 &amp; 15 
+  \end{vmatrix} - 6 \begin{vmatrix}
+  9 &amp; 11 \\
+  13 &amp; 15 
+  \end{vmatrix} + 7 \begin{vmatrix}
+  9 &amp; 13 \\
+  10 &amp; 14 
+  \end{vmatrix}
+  \)</span>$</p>
 <p>Hitung masing-masing determinan 2x2:
 $<span class="math notranslate nohighlight">\(
-\begin{vmatrix}
-10 &amp; 11 \\
-14 &amp; 15 
-\end{vmatrix} = (10 \cdot 15) - (11 \cdot 14) = 150 - 154 = -4
-\)</span>$</p>
+  \begin{vmatrix}
+  10 &amp; 11 \\
+  14 &amp; 15 
+  \end{vmatrix} = (10 \cdot 15) - (11 \cdot 14) = 150 - 154 = -4
+  \)</span>$</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
   \begin{vmatrix}
@@ -1043,20 +1049,21 @@ $<span class="math notranslate nohighlight">\(
   \end{split}\]</div>
 <p>Sehingga:
 $<span class="math notranslate nohighlight">\(
-\det(M_{14}) = 5(-4) - 6(-8) + 7(-4)
-\)</span><span class="math notranslate nohighlight">\(
-\)</span><span class="math notranslate nohighlight">\(
-= -20 + 48 - 28 = 0
-\)</span>$</p>
+  \det(M_{14}) = 5(-4) - 6(-8) + 7(-4)
+  \)</span><span class="math notranslate nohighlight">\(
+  \)</span><span class="math notranslate nohighlight">\(
+  = -20 + 48 - 28 = 0
+  \)</span>$</p>
 <p>Jadi,</p>
 <div class="math notranslate nohighlight">
 \[\begin{equation}
   \text{det}(A) = 6(0) - 7(0) + 8(0) - 9(0) = 0
   \end{equation}\]</div>
 <p>Jadi, <span class="math notranslate nohighlight">\(\text{det}(A) = 0\)</span>, artinya matriks <span class="math notranslate nohighlight">\(A\)</span> tidak memiliki invers (singular).</p>
-</li>
-<li><p><strong>Matrix 5 x 5</strong></p></li>
-</ul>
+</section>
+<section id="matrix-5-x-5">
+<h4>Matrix 5 x 5<a class="headerlink" href="#matrix-5-x-5" title="Link to this heading">#</a></h4>
+</section>
 </section>
 </section>
 </section>
@@ -1132,7 +1139,12 @@ $<span class="math notranslate nohighlight">\(
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#determinan-matriks"><strong>Determinan Matriks</strong></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#minor-matrik"><strong>Minor Matrik</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cofaktor-matriks"><strong>Cofaktor Matriks</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor">Mencari determinan dengan konsep Minor dan Cofaktor</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-determinan-dengan-konsep-minor-dan-cofaktor">Mencari determinan dengan konsep Minor dan Cofaktor</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-3-x-3">Matrix 3 x 3</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-4-x-4">Matrix 4 x 4</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-5-x-5">Matrix 5 x 5</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
