@@ -44,6 +44,7 @@ dari persamaan :
 2. bentuk eselon baris 
 
 - menjadikan pivot (baris 1 kolom 1)
-- bilangan dibawah pivot harus bernilai 0 semua, jadi menggunakan
 
-3. subtitusi balik
+3. Hilangkan elemen-elemen di bawah pivot (angka utama di baris tersebut) menjadi nol, dari atas ke bawah (eliminasi maju).
+
+4. Setelah mencapai bentuk eselon, lanjutkan dengan substitusi balik (back substitution) untuk menyelesaikan variabel-variabel.
