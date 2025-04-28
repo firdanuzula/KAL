@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Persamaan Linier &#8212; KAL</title>
+    <title>Transformasi Linier &#8212; KAL</title>
   
   
   
@@ -62,10 +62,9 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'transflinier';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Penyelesaian Sistem Persamaan Linier" href="penyelesaianspl.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -138,7 +137,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -165,8 +164,8 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Persamaan Linier
                 </a>
             </li>
@@ -175,15 +174,6 @@
 <li class="toctree-l1"><a class="reference internal" href="penyelesaianspl.html">Penyelesaian Sistem Persamaan Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="latihanspl.html">Soal Penyelesaian Sistem Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matriks.html">Matriks</a></li>
-
-
-
-
-
-<li class="toctree-l1"><a class="reference internal" href="translinier.html">Transformasi Linier</a></li>
-
-
-
 </ul>
 
     </div>
@@ -260,7 +250,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Ftransflinier.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -290,7 +280,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/transflinier.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -300,7 +290,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -366,7 +356,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Persamaan Linier</h1>
+    <h1>Transformasi Linier</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -376,16 +366,31 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Persamaan Linier</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linier">Sistem Persamaan Linier</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linier">Solusi Sistem Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi-jika-garis-atau-berpotongan-pada-satu-titik">1. Satu solusi : Jika garis atau berpotongan pada satu titik.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidak-ada-solusi-jika-garis-tidak-berpotongan">2. Tidak ada solusi : Jika garis tidak berpotongan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi-jika-garis-saling-tumpang-tindih">3. Banyak solusi : Jika garis saling tumpang tindih</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Transformasi Linier</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buktikan-bahwa-matriks-a-adalah-transformasi-linier">Buktikan bahwa matriks A adalah transformasi linier</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix"><br/>
+$<span class="math notranslate nohighlight">\(T(x) = 
+\begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta 
+\end{bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x \\
+y \end{bmatrix} \)</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sementara-itu-t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">Sementara itu:
+<br/>
+<span class="math notranslate nohighlight">\(T(\mathbf{u}) + T(\mathbf{v})\)</span> =
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \\
+x_1 \sin \theta + y_1 \cos \theta
+\end{bmatrix}\)</span>
++
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x_2 \cos \theta - y_2 \sin \theta \\
+x_2 \sin \theta + y_2 \cos \theta
+\end{bmatrix}\)</span></a></li>
 </ul>
 
             </nav>
@@ -398,44 +403,95 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="persamaan-linier">
-<h1>Persamaan Linier<a class="headerlink" href="#persamaan-linier" title="Link to this heading">#</a></h1>
-<p>Persamaan linier adalah persamaan aljabar yang melibatkan variabel-variabel yang memiliki pangkat 1, atau dengan kata lain, tidak ada variabel yang dipangkatkan lebih tinggi dari satu (misalnya, tidak ada <span class="math notranslate nohighlight">\( x^2, y^3 \)</span>, dan seterusnya). Persamaan linier dapat digambarkan dalam bentuk umum, yakni <span class="math notranslate nohighlight">\( a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = b \)</span>.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
-<h1>Sistem Persamaan Linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
-<p>Sistem persamaan linier adalah sekumpulan dari beberapa persamaan linear yang diselesaikan secara bersama untuk menemukan nilai dan variabel yang belum diketahui</p>
-<section id="solusi-sistem-persamaan-linier">
-<h2>Solusi Sistem Persamaan Linier<a class="headerlink" href="#solusi-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>Solusi dari persamaan linier adalah nilai dari variabel yang membuat persamaan tersebut menjadi benar. Pada sistem persamaan linier, solusi ini adalah jika titik-titik yang mewakili persamaan-persamaan tersebut saling berpotongan. Solusi tersebut bisa berupa:</p>
-<section id="satu-solusi-jika-garis-atau-berpotongan-pada-satu-titik">
-<h3>1. Satu solusi : Jika garis atau berpotongan pada satu titik.<a class="headerlink" href="#satu-solusi-jika-garis-atau-berpotongan-pada-satu-titik" title="Link to this heading">#</a></h3>
-<p>Contoh persamaan linier dengan dua variabel <span class="math notranslate nohighlight">\(x\)</span> dan <span class="math notranslate nohighlight">\(y\)</span> yang berpotongan bisa ditulis sebagai berikut : <span class="math notranslate nohighlight">\(x + y = 6\)</span> dan <span class="math notranslate nohighlight">\(2x + y = 8\)</span></p>
-<p>Untuk menemukan titik potongnya kita selesaikan menggunakan metode eliminasi.</p>
-<iframe scrolling="no" title="Simultaneous Equations:Elimination" src="https://www.geogebra.org/material/iframe/id/MXa3HKy3/width/977/height/574/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="977px" height="574px" style="border:0px;"> </iframe>
-<p>lalu hasil nya akan seperti ini</p>
-<p><img alt="plot" src="_images/1solusi.png" /></p>
-</section>
-<section id="tidak-ada-solusi-jika-garis-tidak-berpotongan">
-<h3>2. Tidak ada solusi : Jika garis tidak berpotongan<a class="headerlink" href="#tidak-ada-solusi-jika-garis-tidak-berpotongan" title="Link to this heading">#</a></h3>
-<p>Kita dapat melihat bahwa kedua persamaan ini berbentuk sama, yaitu :
-<span class="math notranslate nohighlight">\( x + y = 5\)</span> dan <span class="math notranslate nohighlight">\( x + y = 8\)</span>.
-maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta). Namun, konstanta mereka berbeda (5 dan 8). Jadi, tidak ada solusi yang dapat memenuhi kedua persamaan tersebut secara bersamaan.</p>
-<p>Dengan kata lain, kedua persamaan ini saling sejajar dan tidak memiliki titik potong. Artinya, sistem persamaan ini tidak memiliki solusi.</p>
-<p>Kita dapat menyimpulkan bahwa tidak ada titik potong. Jika digambarkan maka hasilnya akan seperti ini.</p>
-<p><img alt="plot" src="_images/2solusi.png" /></p>
-</section>
-<section id="banyak-solusi-jika-garis-saling-tumpang-tindih">
-<h3>3. Banyak solusi : Jika garis saling tumpang tindih<a class="headerlink" href="#banyak-solusi-jika-garis-saling-tumpang-tindih" title="Link to this heading">#</a></h3>
-<p>Untuk dua persamaan yang memiliki titik potong yang sama namun tidak identik, kita bisa membuat dua persamaan yang berbeda, tetapi keduanya saling mewakili garis yang sama. Berikut contohnya:
-<span class="math notranslate nohighlight">\(x + y = 7\)</span> dan <span class="math notranslate nohighlight">\(2x + 2y = 14\)</span></p>
-<p>Persamaan kedua bisa disederhanakan menjadi <span class="math notranslate nohighlight">\(x + y = 7\)</span>, yang identik dengan persamaan pertama. Meskipun persamaan ini terlihat berbeda, keduanya sebenarnya menggambarkan garis yang sama, sehingga titik potongnya adalah garis itu sendiri.</p>
-<p>Dengan kata lain, kedua persamaan ini akan tumpang tindih di sepanjang garis <span class="math notranslate nohighlight">\(x + y = 7\)</span>. Jika di gambarkan, maka hasilnya akan seperti ini.</p>
-<p><img alt="plot" src="_images/3solusi.png" /></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="transformasi-linier">
+<h1>Transformasi Linier<a class="headerlink" href="#transformasi-linier" title="Link to this heading">#</a></h1>
+<section id="buktikan-bahwa-matriks-a-adalah-transformasi-linier">
+<h2>Buktikan bahwa matriks A adalah transformasi linier<a class="headerlink" href="#buktikan-bahwa-matriks-a-adalah-transformasi-linier" title="Link to this heading">#</a></h2>
+<p>Transformasi:</p>
+<div class="math notranslate nohighlight">
+\[T(x) = Ax\]</div>
+<p>dengan</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}A = \begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{bmatrix}\end{split}\]</div>
+<p>dan</p>
+<p><br />
+$<span class="math notranslate nohighlight">\(x = \begin{bmatrix}
+x \\
+y
+\end{bmatrix}\)</span>$</p>
+<p>Hitung Operasi Matrik:</p>
 </section>
 </section>
-<div class="toctree-wrapper compound">
-</div>
+<section class="tex2jax_ignore mathjax_ignore" id="t-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix">
+<h1><br />
+$<span class="math notranslate nohighlight">\(T(x) = 
+\begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta 
+\end{bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x \\
+y \end{bmatrix} \)</span><a class="headerlink" href="#t-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix" title="Link to this heading">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+x \cos \theta - y \sin \theta \\
+x \sin \theta + y \cos \theta 
+\end{bmatrix}\)</span>$</p>
+<p>Sifat 1:</p>
+<p><br />
+$<span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
+\$\)</span></p>
+<p>Misal:
+<br />
+$<span class="math notranslate nohighlight">\(\mathbf{u} = \begin{bmatrix} x_1 \\ y_1 \end{bmatrix}, \quad \mathbf{v} = \begin{bmatrix} x_2 \\ y_2 \end{bmatrix}\)</span>$</p>
+<p>Hitung:
+<br />
+$<span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T\left( \begin{bmatrix} x_1 + x_2 \\ y_1 + y_2 \end{bmatrix} \right)
+= \)</span>\begin{bmatrix}
+(x_1 + x_2)\cos \theta - (y_1 + y_2)\sin \theta \
+(x_1 + x_2)\sin \theta + (y_1 + y_2)\cos \theta
+\end{bmatrix}$$</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="sementara-itu-t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">
+<h1>Sementara itu:
+<br />
+<span class="math notranslate nohighlight">\(T(\mathbf{u}) + T(\mathbf{v})\)</span> =
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \\
+x_1 \sin \theta + y_1 \cos \theta
+\end{bmatrix}\)</span>
++
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x_2 \cos \theta - y_2 \sin \theta \\
+x_2 \sin \theta + y_2 \cos \theta
+\end{bmatrix}\)</span><a class="headerlink" href="#sementara-itu-t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix" title="Link to this heading">#</a></h1>
+<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
+(x_1 + x_2)\cos \theta - (y_1 + y_2)\sin \theta \\
+(x_1 + x_2)\sin \theta + (y_1 + y_2)\cos \theta
+\end{bmatrix}\)</span></p>
+<p>✅ Hasilnya sama <span class="math notranslate nohighlight">\(\rightarrow\)</span> sifat 1 terpenuhi.</p>
+<p>Sifat 2:</p>
+<p>Misal:
+<br />
+cu = <span class="math notranslate nohighlight">\(\begin{bmatrix} cx_1 \\ cy_1 \end{bmatrix}\)</span></p>
+<p>Hitung:
+<br />
+T(cu) = <span class="math notranslate nohighlight">\(\begin{bmatrix} cx_1 \cos \theta - cy_1 \sin \theta \\ cx_1 \sin \theta + cy_1 \cos \theta \end{bmatrix}\)</span><span class="math notranslate nohighlight">\(
+= c\begin{bmatrix} x_1 \cos \theta - y_1 \sin \theta \\ x_1 \sin \theta + y_1 \cos \theta \end{bmatrix}\)</span>
+= cT(u)</p>
+<p>✅ Hasilnya sama <span class="math notranslate nohighlight">\(\rightarrow\)</span> sifat 2 terpenuhi.</p>
+<p>Karena kedua sifat tersebut terbukti berlaku untuk transformasi ini, maka:
+<br />
+<span class="math notranslate nohighlight">\(T(\mathbf{x}) = A\mathbf{x}\)</span>
+dengan
+<br />
+$<span class="math notranslate nohighlight">\(A = \begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{bmatrix}\)</span>$</p>
+<p>adalah transformasi linier di <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -468,15 +524,6 @@ maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta).
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="penyelesaianspl.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Penyelesaian Sistem Persamaan Linier</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -494,16 +541,31 @@ maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta).
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Persamaan Linier</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linier">Sistem Persamaan Linier</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linier">Solusi Sistem Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi-jika-garis-atau-berpotongan-pada-satu-titik">1. Satu solusi : Jika garis atau berpotongan pada satu titik.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidak-ada-solusi-jika-garis-tidak-berpotongan">2. Tidak ada solusi : Jika garis tidak berpotongan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi-jika-garis-saling-tumpang-tindih">3. Banyak solusi : Jika garis saling tumpang tindih</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Transformasi Linier</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buktikan-bahwa-matriks-a-adalah-transformasi-linier">Buktikan bahwa matriks A adalah transformasi linier</a></li>
 </ul>
 </li>
-</ul>
-</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix"><br/>
+$<span class="math notranslate nohighlight">\(T(x) = 
+\begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta 
+\end{bmatrix}\)</span>
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x \\
+y \end{bmatrix} \)</span></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sementara-itu-t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">Sementara itu:
+<br/>
+<span class="math notranslate nohighlight">\(T(\mathbf{u}) + T(\mathbf{v})\)</span> =
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \\
+x_1 \sin \theta + y_1 \cos \theta
+\end{bmatrix}\)</span>
++
+<span class="math notranslate nohighlight">\(\begin{bmatrix}
+x_2 \cos \theta - y_2 \sin \theta \\
+x_2 \sin \theta + y_2 \cos \theta
+\end{bmatrix}\)</span></a></li>
 </ul>
 
   </nav></div>
