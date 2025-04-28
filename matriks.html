@@ -176,6 +176,8 @@
 
 
 
+
+
 </ul>
 
     </div>
@@ -395,31 +397,35 @@
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-linier">Transformasi Linier</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buktikan-bahwa-matriks-a-adalah-transformasi-linier">Buktikan bahwa matriks A adalah transformasi linier</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix"><br/>
-$<span class="math notranslate nohighlight">\(T(x) = 
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-linier">Transformasi Linier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-mathbf-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix">$T(\mathbf{x}) =
 \begin{bmatrix}
-\cos \theta &amp; -\sin \theta \\
-\sin \theta &amp; \cos \theta 
-\end{bmatrix}\)</span>
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-x \\
-y \end{bmatrix} \)</span></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sementara-itu-t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">Sementara itu:
-<br/>
-$<span class="math notranslate nohighlight">\(T(\mathbf{u}) + T(\mathbf{v})\)</span><span class="math notranslate nohighlight">\( =
-\)</span><span class="math notranslate nohighlight">\(\begin{bmatrix}
-x_1 \cos \theta - y_1 \sin \theta \\
+\cos \theta &amp; -\sin \theta \
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+\begin{bmatrix}
+x \
+y
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">$T(\mathbf{u}) + T(\mathbf{v}) =
+\begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \
 x_1 \sin \theta + y_1 \cos \theta
-\end{bmatrix}\)</span>
+\end{bmatrix}
 +
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
-x_2 \cos \theta - y_2 \sin \theta \\
+\begin{bmatrix}
+x_2 \cos \theta - y_2 \sin \theta \
 x_2 \sin \theta + y_2 \cos \theta
-\end{bmatrix}\)</span>$</a></li>
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-c-mathbf-u-begin-bmatrix-cx-1-cos-theta-cy-1-sin-theta-cx-1-sin-theta-cy-1-cos-theta-end-bmatrix">$T(c\mathbf{u}) =
+\begin{bmatrix}
+cx_1 \cos \theta - cy_1 \sin \theta \
+cx_1 \sin \theta + cy_1 \cos \theta
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#c-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix">c \begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \
+x_1 \sin \theta + y_1 \cos \theta
+\end{bmatrix}</a></li>
 </ul>
 
             </nav>
@@ -1328,93 +1334,90 @@ $<span class="math notranslate nohighlight">\(M_{13} = \begin{bmatrix}
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="transformasi-linier">
 <h1>Transformasi Linier<a class="headerlink" href="#transformasi-linier" title="Link to this heading">#</a></h1>
-<section id="buktikan-bahwa-matriks-a-adalah-transformasi-linier">
-<h2>Buktikan bahwa matriks A adalah transformasi linier<a class="headerlink" href="#buktikan-bahwa-matriks-a-adalah-transformasi-linier" title="Link to this heading">#</a></h2>
 <p>Transformasi:</p>
-<div class="math notranslate nohighlight">
-\[T(x) = Ax\]</div>
+<p><span class="math notranslate nohighlight">\(T(\mathbf{x}) = A\mathbf{x}\)</span></p>
 <p>dengan</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{bmatrix}
+<p><span class="math notranslate nohighlight">\(A = \begin{bmatrix}
 \cos \theta &amp; -\sin \theta \\
 \sin \theta &amp; \cos \theta
-\end{bmatrix}\end{split}\]</div>
+\end{bmatrix}\)</span></p>
 <p>dan</p>
-<p><br />
-$<span class="math notranslate nohighlight">\(x = \begin{bmatrix}
+<p><span class="math notranslate nohighlight">\(\mathbf{x} = \begin{bmatrix}
 x \\
 y
-\end{bmatrix}\)</span>$</p>
-<p>Hitung Operasi Matrik:</p>
+\end{bmatrix}\)</span></p>
+<p>Hitung Operasi Matriks:</p>
 </section>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="t-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix">
-<h1><br />
-$<span class="math notranslate nohighlight">\(T(x) = 
+<section class="tex2jax_ignore mathjax_ignore" id="t-mathbf-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix">
+<h1>$T(\mathbf{x}) =
 \begin{bmatrix}
-\cos \theta &amp; -\sin \theta \\
-\sin \theta &amp; \cos \theta 
-\end{bmatrix}\)</span>
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-x \\
-y \end{bmatrix} \)</span><a class="headerlink" href="#t-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix" title="Link to this heading">#</a></h1>
-<p><span class="math notranslate nohighlight">\(\begin{bmatrix}
-x \cos \theta - y \sin \theta \\
-x \sin \theta + y \cos \theta 
-\end{bmatrix}\)</span>$</p>
+\cos \theta &amp; -\sin \theta \
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+\begin{bmatrix}
+x \
+y
+\end{bmatrix}<a class="headerlink" href="#t-mathbf-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix" title="Link to this heading">#</a></h1>
+<p>\begin{bmatrix}
+x \cos \theta - y \sin \theta \
+x \sin \theta + y \cos \theta
+\end{bmatrix}$</p>
 <p>Sifat 1:</p>
-<p><br />
-$<span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})
-\$\)</span></p>
-<p>Misal:
-<br />
-$<span class="math notranslate nohighlight">\(\mathbf{u} = \begin{bmatrix} x_1 \\ y_1 \end{bmatrix}, \quad \mathbf{v} = \begin{bmatrix} x_2 \\ y_2 \end{bmatrix}\)</span>$</p>
-<p>Hitung:
-<br />
-$<span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T\left( \begin{bmatrix} x_1 + x_2 \\ y_1 + y_2 \end{bmatrix} \right)
-= \)</span>\begin{bmatrix}
-(x_1 + x_2)\cos \theta - (y_1 + y_2)\sin \theta \
-(x_1 + x_2)\sin \theta + (y_1 + y_2)\cos \theta
-\end{bmatrix}$$</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="sementara-itu-t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">
-<h1>Sementara itu:
-<br />
-$<span class="math notranslate nohighlight">\(T(\mathbf{u}) + T(\mathbf{v})\)</span><span class="math notranslate nohighlight">\( =
-\)</span><span class="math notranslate nohighlight">\(\begin{bmatrix}
-x_1 \cos \theta - y_1 \sin \theta \\
-x_1 \sin \theta + y_1 \cos \theta
-\end{bmatrix}\)</span>
-+
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
-x_2 \cos \theta - y_2 \sin \theta \\
-x_2 \sin \theta + y_2 \cos \theta
-\end{bmatrix}\)</span>$<a class="headerlink" href="#sementara-itu-t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix" title="Link to this heading">#</a></h1>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix}
+<p><span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T(\mathbf{u}) + T(\mathbf{v})\)</span></p>
+<p>Misal:</p>
+<p><span class="math notranslate nohighlight">\(\mathbf{u} = \begin{bmatrix} x_1 \\ y_1 \end{bmatrix}, \quad 
+\mathbf{v} = \begin{bmatrix} x_2 \\ y_2 \end{bmatrix}\)</span></p>
+<p>Hitung:</p>
+<p><span class="math notranslate nohighlight">\(T(\mathbf{u} + \mathbf{v}) = T\left( \begin{bmatrix} x_1 + x_2 \\ y_1 + y_2 \end{bmatrix} \right)
+= \begin{bmatrix}
 (x_1 + x_2)\cos \theta - (y_1 + y_2)\sin \theta \\
 (x_1 + x_2)\sin \theta + (y_1 + y_2)\cos \theta
-\end{bmatrix}\end{split}\]</div>
+\end{bmatrix}\)</span></p>
+<p>Sedangkan:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">
+<h1>$T(\mathbf{u}) + T(\mathbf{v}) =
+\begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \
+x_1 \sin \theta + y_1 \cos \theta
+\end{bmatrix}
++
+\begin{bmatrix}
+x_2 \cos \theta - y_2 \sin \theta \
+x_2 \sin \theta + y_2 \cos \theta
+\end{bmatrix}<a class="headerlink" href="#t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix" title="Link to this heading">#</a></h1>
+<p>\begin{bmatrix}
+(x_1 + x_2)\cos \theta - (y_1 + y_2)\sin \theta \
+(x_1 + x_2)\sin \theta + (y_1 + y_2)\cos \theta
+\end{bmatrix}$</p>
 <p>✅ Hasilnya sama <span class="math notranslate nohighlight">\(\rightarrow\)</span> sifat 1 terpenuhi.</p>
 <p>Sifat 2:</p>
-<p>Misal:
-<br />
-cu = <span class="math notranslate nohighlight">\(\begin{bmatrix} cx_1 \\ cy_1 \end{bmatrix}\)</span></p>
-<p>Hitung:
-<br />
-T(cu) = <span class="math notranslate nohighlight">\(\begin{bmatrix} cx_1 \cos \theta - cy_1 \sin \theta \\ cx_1 \sin \theta + cy_1 \cos \theta \end{bmatrix}\)</span>
-= c<span class="math notranslate nohighlight">\(\begin{bmatrix} x_1 \cos \theta - y_1 \sin \theta \\ x_1 \sin \theta + y_1 \cos \theta \end{bmatrix}\)</span>
-= cT(u)</p>
+<p>Misal:</p>
+<p><span class="math notranslate nohighlight">\(c\mathbf{u} = \begin{bmatrix} cx_1 \\ cy_1 \end{bmatrix}\)</span></p>
+<p>Hitung:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="t-c-mathbf-u-begin-bmatrix-cx-1-cos-theta-cy-1-sin-theta-cx-1-sin-theta-cy-1-cos-theta-end-bmatrix">
+<h1>$T(c\mathbf{u}) =
+\begin{bmatrix}
+cx_1 \cos \theta - cy_1 \sin \theta \
+cx_1 \sin \theta + cy_1 \cos \theta
+\end{bmatrix}<a class="headerlink" href="#t-c-mathbf-u-begin-bmatrix-cx-1-cos-theta-cy-1-sin-theta-cx-1-sin-theta-cy-1-cos-theta-end-bmatrix" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="c-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix">
+<h1>c \begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \
+x_1 \sin \theta + y_1 \cos \theta
+\end{bmatrix}<a class="headerlink" href="#c-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix" title="Link to this heading">#</a></h1>
+<p>cT(\mathbf{u})$</p>
 <p>✅ Hasilnya sama <span class="math notranslate nohighlight">\(\rightarrow\)</span> sifat 2 terpenuhi.</p>
-<p>Karena kedua sifat tersebut terbukti berlaku untuk transformasi ini, maka:
-<br />
-<span class="math notranslate nohighlight">\(T(\mathbf{x}) = A\mathbf{x}\)</span>
-dengan
-<br />
-$<span class="math notranslate nohighlight">\(A = \begin{bmatrix}
+<p>Kesimpulan:</p>
+<p>Karena kedua sifat tersebut terbukti berlaku untuk transformasi ini, maka:</p>
+<p><span class="math notranslate nohighlight">\(T(\mathbf{x}) = A\mathbf{x}\)</span></p>
+<p>dengan</p>
+<p><span class="math notranslate nohighlight">\(A = \begin{bmatrix}
 \cos \theta &amp; -\sin \theta \\
 \sin \theta &amp; \cos \theta
-\end{bmatrix}\)</span>$</p>
+\end{bmatrix}\)</span></p>
 <p>adalah transformasi linier di <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>.</p>
 </section>
 
@@ -1501,31 +1504,35 @@ $<span class="math notranslate nohighlight">\(A = \begin{bmatrix}
 </li>
 </ul>
 </li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-linier">Transformasi Linier</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#buktikan-bahwa-matriks-a-adalah-transformasi-linier">Buktikan bahwa matriks A adalah transformasi linier</a></li>
-</ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix"><br/>
-$<span class="math notranslate nohighlight">\(T(x) = 
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-linier">Transformasi Linier</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-mathbf-x-begin-bmatrix-cos-theta-sin-theta-sin-theta-cos-theta-end-bmatrix-begin-bmatrix-x-y-end-bmatrix">$T(\mathbf{x}) =
 \begin{bmatrix}
-\cos \theta &amp; -\sin \theta \\
-\sin \theta &amp; \cos \theta 
-\end{bmatrix}\)</span>
-<span class="math notranslate nohighlight">\(\begin{bmatrix}
-x \\
-y \end{bmatrix} \)</span></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sementara-itu-t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">Sementara itu:
-<br/>
-$<span class="math notranslate nohighlight">\(T(\mathbf{u}) + T(\mathbf{v})\)</span><span class="math notranslate nohighlight">\( =
-\)</span><span class="math notranslate nohighlight">\(\begin{bmatrix}
-x_1 \cos \theta - y_1 \sin \theta \\
+\cos \theta &amp; -\sin \theta \
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+\begin{bmatrix}
+x \
+y
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-mathbf-u-t-mathbf-v-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix-begin-bmatrix-x-2-cos-theta-y-2-sin-theta-x-2-sin-theta-y-2-cos-theta-end-bmatrix">$T(\mathbf{u}) + T(\mathbf{v}) =
+\begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \
 x_1 \sin \theta + y_1 \cos \theta
-\end{bmatrix}\)</span>
+\end{bmatrix}
 +
-$<span class="math notranslate nohighlight">\(\begin{bmatrix}
-x_2 \cos \theta - y_2 \sin \theta \\
+\begin{bmatrix}
+x_2 \cos \theta - y_2 \sin \theta \
 x_2 \sin \theta + y_2 \cos \theta
-\end{bmatrix}\)</span>$</a></li>
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#t-c-mathbf-u-begin-bmatrix-cx-1-cos-theta-cy-1-sin-theta-cx-1-sin-theta-cy-1-cos-theta-end-bmatrix">$T(c\mathbf{u}) =
+\begin{bmatrix}
+cx_1 \cos \theta - cy_1 \sin \theta \
+cx_1 \sin \theta + cy_1 \cos \theta
+\end{bmatrix}</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#c-begin-bmatrix-x-1-cos-theta-y-1-sin-theta-x-1-sin-theta-y-1-cos-theta-end-bmatrix">c \begin{bmatrix}
+x_1 \cos \theta - y_1 \sin \theta \
+x_1 \sin \theta + y_1 \cos \theta
+\end{bmatrix}</a></li>
 </ul>
 
   </nav></div>
