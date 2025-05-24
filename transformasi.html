@@ -1411,6 +1411,237 @@ z \\
 <img alt="_images/419e23edfae6bf919912573d847fa925c71b82ee38baf490949e9ae8f556a7a0.png" src="_images/419e23edfae6bf919912573d847fa925c71b82ee38baf490949e9ae8f556a7a0.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Eigenvalues dan Eigenvector</span>
+
+<span class="c1">##1. Definisi Eigenvalues dan Eigenvector</span>
+
+<span class="mf">1.</span> <span class="n">Eigenvalue</span> <span class="n">adalah</span> <span class="n">skala</span> <span class="p">(</span><span class="n">angka</span><span class="p">)</span> <span class="n">yang</span> <span class="n">menyatakan</span> <span class="n">berapa</span> <span class="n">kali</span> <span class="n">panjang</span> <span class="n">eigenvector</span> <span class="n">berubah</span> <span class="n">karena</span> <span class="n">transformasi</span> <span class="n">itu</span><span class="o">.</span>
+<span class="mf">2.</span> <span class="n">Eigenvector</span> <span class="n">adalah</span> <span class="n">vektor</span> <span class="n">spesial</span> <span class="n">yang</span> <span class="n">tidak</span> <span class="n">berubah</span> <span class="n">arah</span> <span class="n">saat</span> <span class="n">transformasi</span><span class="err">—</span><span class="n">panjangnya</span> <span class="n">bisa</span> <span class="n">berubah</span> <span class="p">(</span><span class="n">diperbesar</span> <span class="n">atau</span> <span class="n">diperkecil</span><span class="p">),</span> <span class="n">tapi</span> <span class="n">arahnya</span> <span class="n">tetap</span><span class="o">.</span>
+
+<span class="c1">##2. Mencari Eigenvalues dan Eigenvector menggikan Polynomial Carakteristik </span>
+<span class="c1">### 1. Matriks A</span>
+
+<span class="n">Pertama</span><span class="o">-</span><span class="n">tama</span> <span class="n">Bentuk</span> <span class="err">$</span><span class="n">A</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="n">I</span><span class="err">$</span>
+
+<span class="n">Kita</span> <span class="n">kurangkan</span> <span class="err">$</span>\<span class="k">lambda</span><span class="err">$</span> <span class="n">dari</span> <span class="n">diagonal</span> <span class="p">(</span><span class="n">karena</span> <span class="err">$</span><span class="n">I</span><span class="err">$</span> <span class="n">adalah</span> <span class="n">matriks</span> <span class="n">identitas</span><span class="p">):</span>
+
+<span class="err">$$</span>
+<span class="n">A</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="n">I</span> <span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="mi">3</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="o">&amp;</span> <span class="mi">0</span> \\
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">3</span> <span class="o">-</span> \<span class="k">lambda</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">lalu</span> <span class="n">Determinan</span> <span class="n">dari</span> <span class="err">$</span><span class="n">A</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="n">I</span><span class="err">$</span>
+
+<span class="err">$$</span>
+\<span class="n">det</span><span class="p">(</span><span class="n">A</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="n">I</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> \<span class="k">lambda</span><span class="p">)(</span><span class="mi">3</span> <span class="o">-</span> \<span class="k">lambda</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> \<span class="k">lambda</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span>
+<span class="err">$$</span>
+
+<span class="n">Selanjutnya</span> <span class="n">Polinomial</span> <span class="n">Karakteristik</span>
+
+<span class="err">$$</span>
+<span class="p">(</span><span class="mi">3</span> <span class="o">-</span> \<span class="k">lambda</span><span class="p">)</span><span class="o">^</span><span class="mi">2</span> <span class="o">=</span> <span class="mi">0</span>
+\<span class="n">Rightarrow</span> \<span class="k">lambda</span> <span class="o">=</span> <span class="mi">3</span> \<span class="n">quad</span> \<span class="n">text</span><span class="p">{(</span><span class="n">dengan</span> <span class="n">multiplikasi</span> <span class="mi">2</span><span class="p">)}</span>
+<span class="err">$$</span>
+
+<span class="n">lalu</span> <span class="n">cari</span> <span class="n">Eigenvector</span>
+
+<span class="n">Selesaikan</span><span class="p">:</span>
+
+<span class="err">$$</span>
+<span class="p">(</span><span class="n">A</span> <span class="o">-</span> <span class="mi">3</span><span class="n">I</span><span class="p">)</span>\<span class="n">vec</span><span class="p">{</span><span class="n">v</span><span class="p">}</span> <span class="o">=</span> \<span class="n">vec</span><span class="p">{</span><span class="mi">0</span><span class="p">}</span>
+\<span class="n">Rightarrow</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">0</span> \\
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">0</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="n">x</span> \\
+<span class="n">y</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="o">=</span> 
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="mi">0</span> \\
+<span class="mi">0</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">Sistem</span> <span class="n">ini</span> <span class="n">memberikan</span> <span class="n">solusi</span><span class="p">:</span>
+
+<span class="err">$$</span>
+<span class="n">x</span> \<span class="n">text</span><span class="p">{</span> <span class="n">bebas</span><span class="p">},</span> \<span class="n">quad</span> <span class="n">y</span> \<span class="n">text</span><span class="p">{</span> <span class="n">bebas</span><span class="p">}</span> \<span class="n">Rightarrow</span>
+\<span class="n">vec</span><span class="p">{</span><span class="n">v</span><span class="p">}</span> <span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="n">x</span> \\
+<span class="n">y</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">},</span> \<span class="n">quad</span> \<span class="n">text</span><span class="p">{</span><span class="n">dengan</span> <span class="p">}</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> \<span class="n">ne</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="err">$$</span>
+
+<span class="n">Artinya</span><span class="p">,</span> <span class="n">semua</span> <span class="n">vektor</span> <span class="n">tak</span> <span class="n">nol</span> <span class="n">adalah</span> <span class="n">eigenvector</span> <span class="n">untuk</span> <span class="err">$</span>\<span class="k">lambda</span> <span class="o">=</span> <span class="mi">3</span><span class="err">$</span><span class="o">.</span>
+
+<span class="c1">### 2. Matriks B</span>
+
+<span class="n">Pertama</span> <span class="n">Bentuk</span> <span class="err">$</span><span class="n">B</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="n">I</span><span class="err">$</span>
+
+<span class="err">$$</span>
+<span class="n">B</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="n">I</span> <span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="o">-</span><span class="mi">2</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="o">&amp;</span> <span class="mi">0</span> \\
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">4</span> <span class="o">-</span> \<span class="k">lambda</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">lalu</span> <span class="n">kita</span> <span class="n">cari</span> <span class="n">Determinan</span>
+
+<span class="err">$$</span>
+\<span class="n">det</span><span class="p">(</span><span class="n">B</span> <span class="o">-</span> \<span class="k">lambda</span> <span class="n">I</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">-</span> \<span class="k">lambda</span><span class="p">)(</span><span class="mi">4</span> <span class="o">-</span> \<span class="k">lambda</span><span class="p">)</span>
+<span class="err">$$</span>
+
+<span class="n">Aelanjutnya</span> <span class="n">Polinomial</span> <span class="n">Karakteristik</span>
+
+<span class="err">$$</span>
+<span class="p">(</span><span class="o">-</span><span class="mi">2</span> <span class="o">-</span> \<span class="k">lambda</span><span class="p">)(</span><span class="mi">4</span> <span class="o">-</span> \<span class="k">lambda</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+\<span class="n">Rightarrow</span> \<span class="n">lambda_1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> \<span class="n">quad</span> \<span class="n">lambda_2</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="err">$$</span>
+
+<span class="n">Lalu</span> <span class="n">Cari</span> <span class="n">Eigenvector</span> <span class="n">untuk</span> <span class="err">$</span>\<span class="k">lambda</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="err">$</span>
+
+<span class="err">$$</span>
+<span class="n">B</span> <span class="o">-</span> <span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="n">I</span> <span class="o">=</span> <span class="n">B</span> <span class="o">+</span> <span class="mi">2</span><span class="n">I</span> <span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">0</span> \\
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">6</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">Selesaikan</span><span class="p">:</span>
+
+<span class="err">$$</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">0</span> \\
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">6</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="n">x</span> \\
+<span class="n">y</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="mi">0</span> \\
+<span class="mi">0</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+\<span class="n">Rightarrow</span>
+<span class="mi">6</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span> \<span class="n">Rightarrow</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+\<span class="n">Rightarrow</span> <span class="n">x</span> \<span class="n">text</span><span class="p">{</span> <span class="n">bebas</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">Jadi</span><span class="p">,</span> <span class="n">eigenvectornya</span><span class="p">:</span>
+
+<span class="err">$$</span>
+\<span class="n">vec</span><span class="p">{</span><span class="n">v</span><span class="p">}</span><span class="n">_1</span> <span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="n">x</span> \\
+<span class="mi">0</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">},</span> \<span class="n">quad</span> <span class="n">x</span> \<span class="n">ne</span> <span class="mi">0</span>
+\<span class="n">Rightarrow</span> \<span class="n">vec</span><span class="p">{</span><span class="n">v</span><span class="p">}</span><span class="n">_1</span> <span class="o">=</span> <span class="n">x</span> \<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span> <span class="mi">1</span> \\ <span class="mi">0</span> \<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">Ambil</span> <span class="err">$</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span><span class="err">$</span><span class="p">,</span> <span class="n">maka</span><span class="p">:</span>
+
+<span class="err">$$</span>
+\<span class="n">vec</span><span class="p">{</span><span class="n">v</span><span class="p">}</span><span class="n">_1</span> <span class="o">=</span> \<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span> <span class="mi">1</span> \\ <span class="mi">0</span> \<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">lalu</span> <span class="n">Cari</span> <span class="n">Eigenvector</span> <span class="n">untuk</span> <span class="err">$</span>\<span class="k">lambda</span> <span class="o">=</span> <span class="mi">4</span><span class="err">$</span>
+
+<span class="err">$$</span>
+<span class="n">B</span> <span class="o">-</span> <span class="mi">4</span><span class="n">I</span> <span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="o">-</span><span class="mi">6</span> <span class="o">&amp;</span> <span class="mi">0</span> \\
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">0</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">Selesaikan</span><span class="p">:</span>
+
+<span class="err">$$</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="o">-</span><span class="mi">6</span> <span class="o">&amp;</span> <span class="mi">0</span> \\
+<span class="mi">0</span> <span class="o">&amp;</span> <span class="mi">0</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="n">x</span> \\
+<span class="n">y</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="o">=</span>
+\<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="mi">0</span> \\
+<span class="mi">0</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+\<span class="n">Rightarrow</span>
+<span class="o">-</span><span class="mi">6</span><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span> \<span class="n">Rightarrow</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+\<span class="n">Rightarrow</span> <span class="n">y</span> \<span class="n">text</span><span class="p">{</span> <span class="n">bebas</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">Jadi</span><span class="p">,</span> <span class="n">eigenvectornya</span><span class="p">:</span>
+
+<span class="err">$$</span>
+\<span class="n">vec</span><span class="p">{</span><span class="n">v</span><span class="p">}</span><span class="n">_2</span> <span class="o">=</span> \<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="mi">0</span> \\
+<span class="n">y</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">},</span> \<span class="n">quad</span> <span class="n">y</span> \<span class="n">ne</span> <span class="mi">0</span>
+\<span class="n">Rightarrow</span> \<span class="n">vec</span><span class="p">{</span><span class="n">v</span><span class="p">}</span><span class="n">_2</span> <span class="o">=</span> <span class="n">y</span> \<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span> <span class="mi">0</span> \\ <span class="mi">1</span> \<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+
+<span class="n">Ambil</span> <span class="err">$</span><span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="err">$</span><span class="p">,</span> <span class="n">maka</span><span class="p">:</span>
+
+<span class="err">$$</span>
+\<span class="n">vec</span><span class="p">{</span><span class="n">v</span><span class="p">}</span><span class="n">_2</span> <span class="o">=</span> \<span class="n">begin</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span> <span class="mi">0</span> \\ <span class="mi">1</span> \<span class="n">end</span><span class="p">{</span><span class="n">bmatrix</span><span class="p">}</span>
+<span class="err">$$</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">17</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">    </span><span class="mi">2</span><span class="o">.</span> <span class="n">Eigenvector</span> <span class="n">adalah</span> <span class="n">vektor</span> <span class="n">spesial</span> <span class="n">yang</span> <span class="n">tidak</span> <span class="n">berubah</span> <span class="n">arah</span> <span class="n">saat</span> <span class="n">transformasi</span><span class="err">—</span><span class="n">panjangnya</span> <span class="n">bisa</span> <span class="n">berubah</span> <span class="p">(</span><span class="n">diperbesar</span> <span class="n">atau</span> <span class="n">diperkecil</span><span class="p">),</span> <span class="n">tapi</span> <span class="n">arahnya</span> <span class="n">tetap</span><span class="o">.</span>
+                                                                                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid character &#39;—&#39; (U+2014)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Matriks A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="c1"># Hitung eigenvalue dan eigenvector</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Urutkan indeks berdasarkan eigenvalue dari besar ke kecil</span>
+<span class="n">sorted_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Urutkan eigenvalue dan eigenvector sesuai indeks</span>
+<span class="n">eigenvalues_sorted</span> <span class="o">=</span> <span class="n">eigenvalues</span><span class="p">[</span><span class="n">sorted_indices</span><span class="p">]</span>
+<span class="n">eigenvectors_sorted</span> <span class="o">=</span> <span class="n">eigenvectors</span><span class="p">[:,</span> <span class="n">sorted_indices</span><span class="p">]</span>
+
+<span class="c1"># Cetak hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues (terurut):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvalues_sorted</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvectors (mengikuti eigenvalues):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors_sorted</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 
