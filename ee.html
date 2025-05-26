@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Persamaan Linier &#8212; KAL</title>
+    <title>Eigenvalues dan Eigenvector &#8212; KAL</title>
   
   
   
@@ -62,10 +62,10 @@
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ee';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Penyelesaian Sistem Persamaan Linier" href="penyelesaianspl.html" />
+    <link rel="prev" title="Refleksi" href="transformasi.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -117,8 +117,6 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
       <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
@@ -138,7 +136,7 @@
     
   
 
-<a class="navbar-brand logo" href="#">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
@@ -165,13 +163,13 @@
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
-            <li class="toctree-l1 current active">
-                <a class="reference internal" href="#">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
                     Persamaan Linier
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="penyelesaianspl.html">Penyelesaian Sistem Persamaan Linier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="latihanspl.html">Soal Penyelesaian Sistem Persamaan Linear</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matriks.html">Matriks</a></li>
@@ -185,7 +183,7 @@
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="ee.html">Eigenvalues dan Eigenvector</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Eigenvalues dan Eigenvector</a></li>
 </ul>
 
     </div>
@@ -262,7 +260,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fee.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -292,7 +290,7 @@
       
       
       
-      <li><a href="_sources/intro.md" target="_blank"
+      <li><a href="_sources/ee.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -302,7 +300,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -368,7 +366,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Persamaan Linier</h1>
+    <h1>Eigenvalues dan Eigenvector</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -378,18 +376,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Persamaan Linier</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linier">Sistem Persamaan Linier</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linier">Solusi Sistem Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi-jika-garis-atau-berpotongan-pada-satu-titik">1. Satu solusi : Jika garis atau berpotongan pada satu titik.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidak-ada-solusi-jika-garis-tidak-berpotongan">2. Tidak ada solusi : Jika garis tidak berpotongan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi-jika-garis-saling-tumpang-tindih">3. Banyak solusi : Jika garis saling tumpang tindih</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">1. Matriks A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-b">2. Matriks B</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -400,44 +389,216 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="persamaan-linier">
-<h1>Persamaan Linier<a class="headerlink" href="#persamaan-linier" title="Link to this heading">#</a></h1>
-<p>Persamaan linier adalah persamaan aljabar yang melibatkan variabel-variabel yang memiliki pangkat 1, atau dengan kata lain, tidak ada variabel yang dipangkatkan lebih tinggi dari satu (misalnya, tidak ada <span class="math notranslate nohighlight">\( x^2, y^3 \)</span>, dan seterusnya). Persamaan linier dapat digambarkan dalam bentuk umum, yakni <span class="math notranslate nohighlight">\( a_1 x_1 + a_2 x_2 + \ldots + a_n x_n = b \)</span>.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="eigenvalues-dan-eigenvector">
+<h1>Eigenvalues dan Eigenvector<a class="headerlink" href="#eigenvalues-dan-eigenvector" title="Link to this heading">#</a></h1>
+<p>##1. Definisi Eigenvalues dan Eigenvector</p>
+<ol class="arabic simple">
+<li><p>Eigenvalue adalah skala (angka) yang menyatakan berapa kali panjang eigenvector berubah karena transformasi itu.</p></li>
+<li><p>Eigenvector adalah vektor spesial yang tidak berubah arah saat transformasi—panjangnya bisa berubah (diperbesar atau diperkecil), tapi arahnya tetap.</p></li>
+</ol>
+<p>##2. Mencari Eigenvalues dan Eigenvector menggikan Polynomial Carakteristik</p>
+<section id="matriks-a">
+<h2>1. Matriks A<a class="headerlink" href="#matriks-a" title="Link to this heading">#</a></h2>
+<p>Pertama-tama Bentuk <span class="math notranslate nohighlight">\(A - \lambda I\)</span></p>
+<p>Kita kurangkan <span class="math notranslate nohighlight">\(\lambda\)</span> dari diagonal (karena <span class="math notranslate nohighlight">\(I\)</span> adalah matriks identitas):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A - \lambda I =
+\begin{bmatrix}
+3 - \lambda &amp; 0 \\
+0 &amp; 3 - \lambda
+\end{bmatrix}
+\end{split}\]</div>
+<p>lalu Determinan dari <span class="math notranslate nohighlight">\(A - \lambda I\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\det(A - \lambda I) = (3 - \lambda)(3 - \lambda) = (3 - \lambda)^2
+\]</div>
+<p>Selanjutnya Polinomial Karakteristik</p>
+<div class="math notranslate nohighlight">
+\[
+(3 - \lambda)^2 = 0
+\Rightarrow \lambda = 3 \quad \text{(dengan multiplikasi 2)}
+\]</div>
+<p>lalu cari Eigenvector</p>
+<p>Selesaikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+(A - 3I)\vec{v} = \vec{0}
+\Rightarrow
+\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+= 
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Sistem ini memberikan solusi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+x \text{ bebas}, \quad y \text{ bebas} \Rightarrow
+\vec{v} =
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}, \quad \text{dengan } (x,y) \ne (0,0)
+\end{split}\]</div>
+<p>Artinya, semua vektor tak nol adalah eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = 3\)</span>.</p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linier">
-<h1>Sistem Persamaan Linier<a class="headerlink" href="#sistem-persamaan-linier" title="Link to this heading">#</a></h1>
-<p>Sistem persamaan linier adalah sekumpulan dari beberapa persamaan linear yang diselesaikan secara bersama untuk menemukan nilai dan variabel yang belum diketahui</p>
-<section id="solusi-sistem-persamaan-linier">
-<h2>Solusi Sistem Persamaan Linier<a class="headerlink" href="#solusi-sistem-persamaan-linier" title="Link to this heading">#</a></h2>
-<p>Solusi dari persamaan linier adalah nilai dari variabel yang membuat persamaan tersebut menjadi benar. Pada sistem persamaan linier, solusi ini adalah jika titik-titik yang mewakili persamaan-persamaan tersebut saling berpotongan. Solusi tersebut bisa berupa:</p>
-<section id="satu-solusi-jika-garis-atau-berpotongan-pada-satu-titik">
-<h3>1. Satu solusi : Jika garis atau berpotongan pada satu titik.<a class="headerlink" href="#satu-solusi-jika-garis-atau-berpotongan-pada-satu-titik" title="Link to this heading">#</a></h3>
-<p>Contoh persamaan linier dengan dua variabel <span class="math notranslate nohighlight">\(x\)</span> dan <span class="math notranslate nohighlight">\(y\)</span> yang berpotongan bisa ditulis sebagai berikut : <span class="math notranslate nohighlight">\(x + y = 6\)</span> dan <span class="math notranslate nohighlight">\(2x + y = 8\)</span></p>
-<p>Untuk menemukan titik potongnya kita selesaikan menggunakan metode eliminasi.</p>
-<iframe scrolling="no" title="Simultaneous Equations:Elimination" src="https://www.geogebra.org/material/iframe/id/MXa3HKy3/width/977/height/574/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="977px" height="574px" style="border:0px;"> </iframe>
-<p>lalu hasil nya akan seperti ini</p>
-<p><img alt="plot" src="_images/1solusi.png" /></p>
-</section>
-<section id="tidak-ada-solusi-jika-garis-tidak-berpotongan">
-<h3>2. Tidak ada solusi : Jika garis tidak berpotongan<a class="headerlink" href="#tidak-ada-solusi-jika-garis-tidak-berpotongan" title="Link to this heading">#</a></h3>
-<p>Kita dapat melihat bahwa kedua persamaan ini berbentuk sama, yaitu :
-<span class="math notranslate nohighlight">\( x + y = 5\)</span> dan <span class="math notranslate nohighlight">\( x + y = 8\)</span>.
-maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta). Namun, konstanta mereka berbeda (5 dan 8). Jadi, tidak ada solusi yang dapat memenuhi kedua persamaan tersebut secara bersamaan.</p>
-<p>Dengan kata lain, kedua persamaan ini saling sejajar dan tidak memiliki titik potong. Artinya, sistem persamaan ini tidak memiliki solusi.</p>
-<p>Kita dapat menyimpulkan bahwa tidak ada titik potong. Jika digambarkan maka hasilnya akan seperti ini.</p>
-<p><img alt="plot" src="_images/2solusi.png" /></p>
-</section>
-<section id="banyak-solusi-jika-garis-saling-tumpang-tindih">
-<h3>3. Banyak solusi : Jika garis saling tumpang tindih<a class="headerlink" href="#banyak-solusi-jika-garis-saling-tumpang-tindih" title="Link to this heading">#</a></h3>
-<p>Untuk dua persamaan yang memiliki titik potong yang sama namun tidak identik, kita bisa membuat dua persamaan yang berbeda, tetapi keduanya saling mewakili garis yang sama. Berikut contohnya:
-<span class="math notranslate nohighlight">\(x + y = 7\)</span> dan <span class="math notranslate nohighlight">\(2x + 2y = 14\)</span></p>
-<p>Persamaan kedua bisa disederhanakan menjadi <span class="math notranslate nohighlight">\(x + y = 7\)</span>, yang identik dengan persamaan pertama. Meskipun persamaan ini terlihat berbeda, keduanya sebenarnya menggambarkan garis yang sama, sehingga titik potongnya adalah garis itu sendiri.</p>
-<p>Dengan kata lain, kedua persamaan ini akan tumpang tindih di sepanjang garis <span class="math notranslate nohighlight">\(x + y = 7\)</span>. Jika di gambarkan, maka hasilnya akan seperti ini.</p>
-<p><img alt="plot" src="_images/3solusi.png" /></p>
-</section>
-</section>
-<div class="toctree-wrapper compound">
+<section id="matriks-b">
+<h2>2. Matriks B<a class="headerlink" href="#matriks-b" title="Link to this heading">#</a></h2>
+<p>Pertama Bentuk <span class="math notranslate nohighlight">\(B - \lambda I\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B - \lambda I =
+\begin{bmatrix}
+-2 - \lambda &amp; 0 \\
+0 &amp; 4 - \lambda
+\end{bmatrix}
+\end{split}\]</div>
+<p>lalu kita cari Determinan</p>
+<div class="math notranslate nohighlight">
+\[
+\det(B - \lambda I) = (-2 - \lambda)(4 - \lambda)
+\]</div>
+<p>Aelanjutnya Polinomial Karakteristik</p>
+<div class="math notranslate nohighlight">
+\[
+(-2 - \lambda)(4 - \lambda) = 0
+\Rightarrow \lambda_1 = -2, \quad \lambda_2 = 4
+\]</div>
+<p>Lalu Cari Eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = -2\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B - (-2)I = B + 2I =
+\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 6
+\end{bmatrix}
+\end{split}\]</div>
+<p>Selesaikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 6
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}
+\Rightarrow
+6y = 0 \Rightarrow y = 0
+\Rightarrow x \text{ bebas}
+\end{split}\]</div>
+<p>Jadi, eigenvectornya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_1 =
+\begin{bmatrix}
+x \\
+0
+\end{bmatrix}, \quad x \ne 0
+\Rightarrow \vec{v}_1 = x \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Ambil <span class="math notranslate nohighlight">\(x = 1\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>lalu Cari Eigenvector untuk <span class="math notranslate nohighlight">\(\lambda = 4\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B - 4I =
+\begin{bmatrix}
+-6 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Selesaikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+-6 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+x \\
+y
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \\
+0
+\end{bmatrix}
+\Rightarrow
+-6x = 0 \Rightarrow x = 0
+\Rightarrow y \text{ bebas}
+\end{split}\]</div>
+<p>Jadi, eigenvectornya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_2 = \begin{bmatrix}
+0 \\
+y
+\end{bmatrix}, \quad y \ne 0
+\Rightarrow \vec{v}_2 = y \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Ambil <span class="math notranslate nohighlight">\(y = 1\)</span>, maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{v}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Matriks A</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">]])</span>
+
+<span class="c1"># Hitung eigenvalue dan eigenvector</span>
+<span class="n">eigenvalues</span><span class="p">,</span> <span class="n">eigenvectors</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eig</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="c1"># Urutkan indeks berdasarkan eigenvalue dari besar ke kecil</span>
+<span class="n">sorted_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c1"># Urutkan eigenvalue dan eigenvector sesuai indeks</span>
+<span class="n">eigenvalues_sorted</span> <span class="o">=</span> <span class="n">eigenvalues</span><span class="p">[</span><span class="n">sorted_indices</span><span class="p">]</span>
+<span class="n">eigenvectors_sorted</span> <span class="o">=</span> <span class="n">eigenvectors</span><span class="p">[:,</span> <span class="n">sorted_indices</span><span class="p">]</span>
+
+<span class="c1"># Cetak hasil</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvalues (terurut):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvalues_sorted</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Eigenvectors (mengikuti eigenvalues):&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eigenvectors_sorted</span><span class="p">)</span>
+</pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Eigenvalues (terurut):
+[ 4. -2.]
+Eigenvectors (mengikuti eigenvalues):
+[[0. 1.]
+ [1. 0.]]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -470,14 +631,14 @@ maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta).
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
-    <a class="right-next"
-       href="penyelesaianspl.html"
-       title="next page">
+    <a class="left-prev"
+       href="transformasi.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Penyelesaian Sistem Persamaan Linier</p>
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Refleksi</p>
       </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -496,18 +657,9 @@ maka, <span class="math notranslate nohighlight">\(x + y =\)</span> (konstanta).
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Persamaan Linier</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#sistem-persamaan-linier">Sistem Persamaan Linier</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#solusi-sistem-persamaan-linier">Solusi Sistem Persamaan Linier</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#satu-solusi-jika-garis-atau-berpotongan-pada-satu-titik">1. Satu solusi : Jika garis atau berpotongan pada satu titik.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tidak-ada-solusi-jika-garis-tidak-berpotongan">2. Tidak ada solusi : Jika garis tidak berpotongan</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#banyak-solusi-jika-garis-saling-tumpang-tindih">3. Banyak solusi : Jika garis saling tumpang tindih</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-a">1. Matriks A</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriks-b">2. Matriks B</a></li>
 </ul>
-</li>
-</ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
