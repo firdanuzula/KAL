@@ -382,6 +382,11 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#program-untuk-menghitung-dot-product-perkalian-titik-dua-vector"><strong>Program untuk menghitung dot product (perkalian titik dua vector)</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materi-vektor-satuan">Materi vektor satuan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-satuan-di-mathbb-r-n"><strong>Vektor Satuan di <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-untuk-menghitung-vektor-satuan">Program Untuk Menghitung Vektor Satuan</a></li>
 </ul>
             </nav>
         </div>
@@ -500,6 +505,84 @@ Dot product: 32
 </div>
 </section>
 </section>
+<section id="materi-vektor-satuan">
+<h2>Materi vektor satuan<a class="headerlink" href="#materi-vektor-satuan" title="Link to this heading">#</a></h2>
+<section id="vektor-satuan-di-mathbb-r-n">
+<h3><strong>Vektor Satuan di <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span></strong><a class="headerlink" href="#vektor-satuan-di-mathbb-r-n" title="Link to this heading">#</a></h3>
+<p>Vektor satuan (unit vector) adalah vektor dengan panjang satu.</p>
+<p>Jelas bahwa vektor x adalah vektor satuan jika dan hanya jika:</p>
+<div class="math notranslate nohighlight">
+\[\|\mathbf{x}\|^2 = \mathbf{x} \cdot \mathbf{x} = 1.\]</div>
+<p><strong>Membentuk Vektor Satuan</strong></p>
+<p>Misalkan x adalah vektor tak nol di <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span>. Maka:
+$<span class="math notranslate nohighlight">\(\frac{\mathbf{x}}{\|\mathbf{x}\|}\)</span>$
+adalah vektor satuan</p>
+<p><strong>Bukti</strong>
+$<span class="math notranslate nohighlight">\(\frac{\mathbf{x}}{\|\mathbf{x}\|} \cdot \frac{\mathbf{x}}{\|\mathbf{x}\|} = \frac{\mathbf{x} \cdot \mathbf{x}}{\|\mathbf{x}\|^2} = \frac{\|\mathbf{x}\|^2}{\|\mathbf{x}\|^2} = 1\)</span>$</p>
+<p><strong>Contoh</strong></p>
+<p>Misalkan <span class="math notranslate nohighlight">\(\mathbf{x} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}\)</span></p>
+<ul class="simple">
+<li><p>Panjang Vektor</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\|\mathbf{x}\| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5.\]</div>
+<ul class="simple">
+<li><p>Vektor Satuan</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{u} = \frac{\mathbf{x}}{\|\mathbf{x}\|} = \frac{1}{5} \begin{bmatrix} 3 \\ 4 \end{bmatrix} = \begin{bmatrix} \frac{3}{5} \\ \frac{4}{5} \end{bmatrix}.\end{split}\]</div>
+<ul class="simple">
+<li><p>Verifikasi</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\|\mathbf{u}\| = \sqrt{\left(\frac{3}{5}\right)^2 + \left(\frac{4}{5}\right)^2} = \sqrt{\frac{9}{25} + \frac{16}{25}} = \sqrt{1} = 1.\]</div>
+</section>
+</section>
+<section id="program-untuk-menghitung-vektor-satuan">
+<h2>Program Untuk Menghitung Vektor Satuan<a class="headerlink" href="#program-untuk-menghitung-vektor-satuan" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="c1"># Definisi vektor</span>
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+
+<span class="c1"># 1. Hitung panjang (norma) vektor</span>
+<span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">total</span> <span class="o">+=</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">norm_x</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Norma vektor x :&quot;</span><span class="p">,</span> <span class="n">norm_x</span><span class="p">)</span>
+
+<span class="c1"># 2. Buat vektor satuan u = x / |x|</span>
+<span class="n">u</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>
+    <span class="n">u</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span> <span class="o">/</span> <span class="n">norm_x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektor satuan u :&quot;</span><span class="p">,</span> <span class="n">u</span><span class="p">)</span>
+
+<span class="c1"># 3. Verifikasi norma vektor u</span>
+<span class="n">total_u</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">u</span><span class="p">:</span>
+    <span class="n">total_u</span> <span class="o">+=</span> <span class="n">i</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">norm_u</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">total_u</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Norma vektor u :&quot;</span><span class="p">,</span> <span class="n">norm_u</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Norma vektor x : 5.0
+Vektor satuan u : [0.6, 0.8]
+Norma vektor u : 1.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -563,6 +646,11 @@ Dot product: 32
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#program-untuk-menghitung-dot-product-perkalian-titik-dua-vector"><strong>Program untuk menghitung dot product (perkalian titik dua vector)</strong></a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#materi-vektor-satuan">Materi vektor satuan</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vektor-satuan-di-mathbb-r-n"><strong>Vektor Satuan di <span class="math notranslate nohighlight">\(\mathbb{R}^n\)</span></strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-untuk-menghitung-vektor-satuan">Program Untuk Menghitung Vektor Satuan</a></li>
 </ul>
   </nav></div>
 
