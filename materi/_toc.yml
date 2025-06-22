@@ -12,6 +12,7 @@ chapters:
 - file: ee.ipynb
 - file: dot.ipynb
 - file: cross.ipynb
+- file: svd.ipynb
 
 
 
